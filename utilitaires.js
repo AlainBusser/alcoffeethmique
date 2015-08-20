@@ -125,3 +125,30 @@ var troncature=function(x){
 var arrondiSup=function(x){
 	return Math.ceil(x);
 }
+
+var  traduction = function(dutexte) {
+    var texte;
+    texte = dutexte;
+    texte = texte.replace(/\ dans\ /g, " in ");
+    texte = texte.replace(/\ et\ /g, " and ");
+    texte = texte.replace(/\ ou\ /g, " or ");
+    texte = texte.replace(/\ est\ /g, " is ");
+    texte = texte.replace(/\ n\'est\ pas'\ /g, " isnt ");
+    texte = texte.replace(/pour\ /g, "for ");
+    texte = texte.replace(/Pour\ /g, "for ");
+    texte = texte.replace(/Sinon/g, "else");
+    texte = texte.replace(/sinon/g, "else");
+    texte = texte.replace(/Si\ /g, "if ");
+    texte = texte.replace(/si\ /g, "if ");
+    texte = texte.replace(/quand\ /g, " when ");
+    texte = texte.replace(/\ nouvelle\ /g, " new ");
+    texte = texte.replace(/\ nouveau\ /g, " new ");
+    texte = texte.replace(/Tant que\ /g, "while ");
+    texte = texte.replace(/tant que\ /g, "while ");
+    texte = texte.replace(/Jusqu'à ce que\ /g, "until ");
+    texte = texte.replace(/jusqu'à ce que\ /g, "until ");
+    texte = texte.replace(/\ devient\ /g, " = ");
+    texte = texte.replace(/:=/g, " = ");
+    return texte;
+  };
+

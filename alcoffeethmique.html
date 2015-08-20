@@ -26,13 +26,13 @@ h1, h2, h3 {color: DarkRed;}
 h4 {color: DarkBlue; }
  .ui-menu { width: 200px; font-size: 80%; }
  .ui-corner-all { border-radius: 10px; }
- a.copier { color: DarkBlue; font-size: 80%; }
+ .copier { color: DarkBlue; font-size: 80%; }
 textarea {border: 5px inset green; border-radius: 1em; font-size: 120%;}
-textarea.entree {background-color: #EEFFEE; color: DarkBlue; font-size: 125%;}
-textarea.sortie {background-color: Black; color: Yellow; font-size: 125%;}
+.entree {background-color: #EEFFEE; color: DarkBlue; font-size: 125%;}
+.sortie {background-color: Black; color: Yellow; font-size: 125%;}
 code { color: DarkBlue; }
-pre.copier1 {border: 2px outset blue; border-radius: 2px; background-color: LightCyan; }
-pre.copier2 {border: 2px outset blue; border-radius: 2px; background-color: LightGreen; }
+.copier1 {border: 2px outset blue; border-radius: 2px; background-color: LightCyan; }
+.copier2 {border: 2px outset blue; border-radius: 2px; background-color: LightGreen; }
 .figure { border: 2px inset gray; width: 640px; height: 480px; }
 #sortieSVG { width: 640px; height: 480px; }
 #graphique { width: 640px; height: 480px; border: 2px inset black; border-radius: 2px; box-shadow: 5px 3px 2px gray; }
@@ -51,7 +51,7 @@ $ ->
 		temps = new Date()
 		affiche "Algorithme lancé"
 		try
-			CoffeeScript.run($('#cadrin').val())
+			CoffeeScript.run(traduction($('#cadrin').val()))
 			temps=new Date()-temps
 			affiche "\nAlgorithme exécuté en #{temps} millisecondes\n"
 		catch error
