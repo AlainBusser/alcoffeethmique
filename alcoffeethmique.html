@@ -270,7 +270,7 @@ $ ->
 		<td> 
 <textarea class="entree" id="cadrin" rows="12" cols="36">#calcul de la racine de 2 par Heron
 [a,b]=[1,2]
-for n in [1..8]
+pour n dans [1..8]
     a=(a+b)/2
     b=2/a
     s="u(#{n})=#{a}"
@@ -410,7 +410,7 @@ x++</pre>
 	<pre class="copier1">affiche dé 6</pre>
 	<p>Le nombre de faces doit être en entier, sans limite.</p>
 	<p>Pour vérifier, on peut lancer 10 fois le dé:</p>
-	<pre class="copier1">(dé 6 for n in [1..10])</pre>
+	<pre class="copier1">(dé 6 pour n dans [1..10])</pre>
 	<h4>Pile ou face</h4>
 	<p>Pour jouer à pile ou face, on lance un dé à deux faces.</p>
 	<h4>Loi uniforme sur [0;1[</h4>
@@ -420,16 +420,16 @@ x++</pre>
 	<p>On peut alors simuler une variable aléatoire Z normale centrée 
 	(d'espérance 0) et réduite (d'écart-type 1) avec</p>
 	<pre class="copier1">Z = -6
-for n in [0...12]
+pour n dans [0...12]
     Z += alea()
 affiche Z</pre>
 	<p>Essayer par exemple</p>
 	<pre class="copier2">gauss = () ->
     Z = -6
-    Z += alea() for n in [0...12]
+    Z += alea() pour n dans [0...12]
     Z
 
-grosTableau = (gauss() for n in [1..1000])
+grosTableau = (gauss() pour n dans [1..1000])
 
 histogramme grosTableau, -3, 3, 15, 200</pre>
 <div class="figure">
@@ -456,10 +456,10 @@ affiche 2+2 isnt 5</pre>
 	<p>Le symbole "&ne; se note donc <code>isnt</code> ou <code>!=</code>, au choix.</p>
 	<h4>Conjonction</h4>
 	<p>Pour dire que x est à la fois positif et pair, on peut écrire</p>
-	<pre class="copier1">x > 0 and x%2 is 0</pre>
+	<pre class="copier1">x>0 et x%2 est 0</pre>
 	<h4>Disjonction</h4>
 	<p>Pour dire que x est, ou bien positif, ou bien pair (ou les deux), on peut écrire</p>
-	<pre class="copier1">x > 0 or x%2 is 0</pre>
+	<pre class="copier1">x > 0 ou x%2 est 0</pre>
 	<p>Une alternative est le double trait vertical.</p>
 	<p>Pour taper le symbole "trait vertical", appuyer avec la main droite sur 
 	<button>AltGr</button> et, <em>sans lâcher ce bouton</em>, actionner le 
@@ -470,12 +470,12 @@ affiche 2+2 isnt 5</pre>
 	<p>Un test est une instruction conditionnelle;
 Pour n'effectuer quelque chose que lorsqu'une condition
 est vraie (par exemple seulement si le dé est tombé sur 6), faire</p>
-	<pre class="copier1">if dé(6) is 6
+	<pre class="copier1">si dé(6) est 6
     affiche "gagné"</pre>
     <p>On remarque l'indentation qui précise que la partie 
     <code>affiche "gagné"</code> ne doit s'effectuer que si le dé vaut 6. 
     </p>
-    <pre class="copier1">affiche "gagné" if dé(6) is 6</pre>
+    <pre class="copier1">affiche "gagné" si dé(6) est 6</pre>
     <p>a le même effet.</p>
     <h4>Test multiple</h4>
     <p>Que faire quand le dé ne tombe <em>pas</em> sur 6 ?</p>
@@ -483,13 +483,13 @@ est vraie (par exemple seulement si le dé est tombé sur 6), faire</p>
     on écrit</p>
     <pre class="copier1">affiche "perdu" unless dé(6) is 6</pre>
     <p>Mais les deux cas peuvent être traités ensemble:</p>
-    <pre class="copier1">if dé(6)==6
+    <pre class="copier1">si dé(6)==6
     affiche "gagné"
-else
+sinon
     affiche "perdu"</pre>
     <h4>Intervalles</h4>
     <p>On peut aussi faire un test dans un intervalle:</p>
-    <pre class="copier1">(x for x in [1..12] when x%2==0)</pre>
+    <pre class="copier1">(x pour x dans [1..12] quand x%2==0)</pre>
     
 </div>
 
@@ -500,25 +500,25 @@ L'intervalle fermé [a;b] se note [a..b] avec deux points;
 L'intervalle ouvert à droite [a;b[ se note [a...b] avec trois points;
 L'appartenance se note <code>in</code>; 
 Pour vérifier que 2 est compris entre 0 et 5:</p>
-	<pre class="copier1">affiche 2 in [0..5]
+	<pre class="copier1">affiche 2 dans [0..5]
 affiche 0 <= 2 <= 5
 	</pre>
 	<p>L'appartenance est aussi utilisée pour appliquer 
 une fonction à un intervalle:</p>
-	<pre class="copier1">affiche (x*x for x in [0..5])</pre>
+	<pre class="copier1">affiche (x*x pour x dans [0..5])</pre>
 	<h3>Ensembles</h3>
 	<h4>Ajout d'un élément</h4>
 	<p>Pour ajouter un élement x à un ensemble A:</p>
-	<pre class="copier1">A.push x</pre>
+	<pre class="copier1">A.empile x</pre>
 	<h4>Retrait d'un élément</h4>
 	<p>Pour enlever le nombre 5 d'un ensemble A:</p>
-	<pre class="copier1">A = (x for x in A if x isnt 5)</pre>
+	<pre class="copier1">A = (x pour x dans A quand x != 5)</pre>
 	<h3>Intervalles d'entiers</h3>
 	<h3>Ensembles</h3>
 	<h4>Intersection</h4>
 	<p>L'intersection de deux ensembles A et B
 est formée des x de A qui sont aussi dans B:</p>
-	<pre class="copier1">I=(x for x in A when x in B)</pre>
+	<pre class="copier1">I=(x pour x dans A quand x dans B)</pre>
 	<h4>Complémentaire</h4>
 	<p>Une légère différence mais qui change tout:</p>
 	<pre class="copier1">(x for x in A when x not in B)</pre>
@@ -528,7 +528,7 @@ contraire d'un évènement.</p>
 	<h4>Réunion</h4>
 	<p>La réunion de deux intervalles n'est pas nécessairement
 un intervalle:</p>
-	<pre class="copier1">A=(x for x in [0..100] when 2 < x < 15 or 80 <= x < 90)
+	<pre class="copier1">A=(x pour x dans [0..100] quand 2 < x < 15 ou 80 <= x < 90)
 affiche A</pre>
 	<h4>Multiensembles</h4>
 	<p>À la différence d'un ensemble, un multiensemble (ou sac) peut contenir plusieurs occurences 
