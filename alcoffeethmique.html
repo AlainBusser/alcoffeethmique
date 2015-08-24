@@ -354,13 +354,14 @@ pour n dans [1..8]
 <li><a href="#ensembles">Évènements</a></li>
 <li><a href="#aideGraph">Graphisme</a></li>
 <li><a href="#stats">Statistiques</a></li>
+<li><a href="#complexes">Complexes</a></li>
 <li><a href="#sylvester">Matrices</a></li>
 </ul>
 
 <div id="affectation">
 	<h2>Affectation, entrée et sortie de données</h2>
 	<h3>Affectation</h3>
-	<p>En coffeescript, l'affectation est notée par un "=".</p>
+	<p>En Coffeescript, l'affectation est notée par un "=".</p>
 	<p>Par exemple,
 		<ol>
 			<li>Pour mettre 2 dans x:
@@ -493,8 +494,8 @@ grosTableau = (gauss() pour n dans [1..1000])
 histogramme grosTableau, -3, 3, 15, 200</pre>
 <div class="figure">
 
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="100%" height="100%"><line stroke-width="1" stroke="black" y2="440" x2="620" y1="440" x1="20"></line><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="8" width="33.333333333333336" y="432" x="53.333333333333336"></rect><text fill="black" y="460" x="53.333333333333336">-3</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="20" width="33.333333333333336" y="420" x="86.66666666666667"></rect><text fill="black" y="460" x="86.66666666666667">-2,6</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="60" width="33.333333333333336" y="380" x="120"></rect><text fill="black" y="460" x="120">-2,2</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="90" width="33.333333333333336" y="350" x="153.33333333333334"></rect><text fill="black" y="460" x="153.33333333333334">-1,8</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="180" width="33.333333333333336" y="260" x="186.66666666666669"></rect><text fill="black" y="460" x="186.66666666666669">-1,4</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="232" width="33.333333333333336" y="208" x="220.00000000000003"></rect><text fill="black" y="460" x="220.00000000000003">-1</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="310" width="33.333333333333336" y="130" x="253.33333333333337"></rect><text fill="black" y="460" x="253.33333333333337">-0,6</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="282" width="33.333333333333336" y="158" x="286.6666666666667"></rect><text fill="black" y="460" x="286.6666666666667">-0,2</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="270" width="33.333333333333336" y="170" x="320"></rect><text fill="black" y="460" x="320">0,2</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="224" width="33.333333333333336" y="216" x="353.3333333333333"></rect><text fill="black" y="460" x="353.3333333333333">0,6</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="160" width="33.333333333333336" y="280" x="386.66666666666663"></rect><text fill="black" y="460" x="386.66666666666663">1</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="98" width="33.333333333333336" y="342" x="419.99999999999994"></rect><text fill="black" y="460" x="419.99999999999994">1,4</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="34" width="33.333333333333336" y="406" x="453.33333333333326"></rect><text fill="black" y="460" x="453.33333333333326">1,8</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="14" width="33.333333333333336" y="426" x="486.6666666666666"></rect><text fill="black" y="460" x="486.6666666666666">2,2</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="10" width="33.333333333333336" y="430" x="519.9999999999999"></rect><text fill="black" y="460" x="519.9999999999999">2,6</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="2" width="33.333333333333336" y="438" x="553.3333333333333"></rect><text fill="black" y="460" x="553.3333333333333">3</text></svg>
-</div>
+
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="100%" height="100%"><line x1="20" y1="440" x2="620" y2="440" stroke="black" stroke-width="1"></line><rect x="53.333333333333336" y="436" width="33.333333333333336" height="4" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="53.333333333333336" y="460" fill="black">-3</text><rect x="86.66666666666667" y="414" width="33.333333333333336" height="26" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="86.66666666666667" y="460" fill="black">-2,6</text><rect x="120" y="392" width="33.333333333333336" height="48" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="120" y="460" fill="black">-2,2</text><rect x="153.33333333333334" y="326" width="33.333333333333336" height="114" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="153.33333333333334" y="460" fill="black">-1,8</text><rect x="186.66666666666669" y="312" width="33.333333333333336" height="128" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="186.66666666666669" y="460" fill="black">-1,4</text><rect x="220.00000000000003" y="236" width="33.333333333333336" height="204" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="220.00000000000003" y="460" fill="black">-1</text><rect x="253.33333333333337" y="152" width="33.333333333333336" height="288" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="253.33333333333337" y="460" fill="black">-0,6</text><rect x="286.6666666666667" y="114" width="33.333333333333336" height="326" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="286.6666666666667" y="460" fill="black">-0,2</text><rect x="320" y="140" width="33.333333333333336" height="300" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="320" y="460" fill="black">0,2</text><rect x="353.3333333333333" y="212" width="33.333333333333336" height="228" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="353.3333333333333" y="460" fill="black">0,6</text><rect x="386.66666666666663" y="280" width="33.333333333333336" height="160" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="386.66666666666663" y="460" fill="black">1</text><rect x="419.99999999999994" y="338" width="33.333333333333336" height="102" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="419.99999999999994" y="460" fill="black">1,4</text><rect x="453.33333333333326" y="396" width="33.333333333333336" height="44" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="453.33333333333326" y="460" fill="black">1,8</text><rect x="486.6666666666666" y="416" width="33.333333333333336" height="24" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="486.6666666666666" y="460" fill="black">2,2</text><rect x="519.9999999999999" y="436" width="33.333333333333336" height="4" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="519.9999999999999" y="460" fill="black">2,6</text><rect x="553.3333333333333" y="440" width="33.333333333333336" height="0" fill="blue" fill-opacity="0.4" stroke="blue" stroke-width="1"></rect><text x="553.3333333333333" y="460" fill="black">3</text></svg></div>
 </div>
 
 <div id="tests">
@@ -512,7 +513,7 @@ histogramme grosTableau, -3, 3, 15, 200</pre>
 	<p>Pour obtenir le contraire d'une proposition, la précéder par un point d'exclamation</p>
 	<pre class="copier1">affiche not 2+2==5
 affiche 2+2 isnt 5</pre>
-	<p>Le symbole "&ne; se note donc <code>isnt</code> ou <code>!=</code>, au choix.</p>
+	<p>Le symbole "&ne;" se note donc <code>isnt</code> ou <code>!=</code> ou "est différent de", au choix.</p>
 	<h4>Conjonction</h4>
 	<p>Pour dire que x est à la fois positif et pair, on peut écrire</p>
 	<pre class="copier1">x>0 et x%2 est 0</pre>
@@ -766,18 +767,18 @@ tant que dé(6) != 6
 	<p>Un dé icosaédrique, comme son nom l'indique, a 20 faces numérotées de 1 à 20. 
 	L'univers de probabilité est alors &Omega;={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}; 
 	On peut le calculer en fabricant un ensemble à partir de la liste des nombres allant de 1 à 20 :</p>
-	<pre class="copier1">univers = nouveau Ensemble [1..20]
+	<pre class="copier1">univers = nouvel Ensemble [1..20]
 
 affiche univers
 	</pre>
 	<h4>Évènements</h4>
 	<p>L'évènement «le résultat est pair» s'écrit A={2,4,6,8,10,12,14,16,18,20}; il peut 
 	se définir en compréhension par</p>
-	<pre class="copier1">A = nouveau Ensemble (x pour x dans univers.support quand x%2 == 0)
+	<pre class="copier1">A = nouvel Ensemble (x pour x dans univers.support quand x%2 == 0)
 	</pre>
 	<p>L'évènement «le résultat s'écrit avec un seul chiffre» peut se définir de façon analogue 
 	mais aussi en faisant comme pour l'univers; on obtient B={1,2,3,4,5,6,7,8,9}</p>
-	<pre class="copier1">B = nouveau Ensemble [1..9]
+	<pre class="copier1">B = nouvel Ensemble [1..9]
 	</pre>
 	<h4>Intersection, réunion, contraire</h4>
 	<p>Le contraire de A est formé des résultats qui sont dans l'univers mais pas dans A; on l'obtient par </p>
@@ -790,9 +791,9 @@ affiche univers
 	<pre class="copier1">A.union B</pre>
 	<h4>Crible d'Eratosthène</h4>
 	<p>Pour chercher les nombres premiers inférieurs ou égaux à 200, on peut faire ainsi :</p>
-	<pre class="copier1">crible = nouveau Ensemble [1..200]
+	<pre class="copier1">crible = nouvel Ensemble [1..200]
 pour m dans [2..200]
-    poubelle = nouveau Ensemble (x pour x dans crible.support quand x>m et x%m est 0)
+    poubelle = nouvel Ensemble (x pour x dans crible.support quand x>m et x%m est 0)
     crible = poubelle.complémentDans crible
 
 affiche crible
@@ -821,9 +822,9 @@ histogramme crible, 0, 200, 10, 10
 	<p>La <em>probabilité</em> d'un évènement A est définie comme le quotient de son cardinal 
 	par celui de l'univers; elle dépend donc du choix de l'univers, et se note P<sub>&Omega;</sub>(A), ou, 
 	lorsqu'il n'y a pas d'ambigüité sur &Omega;, simplement P(A): </p>
-	<pre class="copier1">univers = nouveau Ensemble [1..20]
+	<pre class="copier1">univers = nouvel Ensemble [1..20]
 proba = (E) -> E.probaSachantQue univers
-B = nouveau Ensemble [1..9]
+B = nouvel Ensemble [1..9]
 affiche proba(B)
 </pre>
 </div>
@@ -896,13 +897,13 @@ affiche proba(B)
 	<pre class="copier1">diagrammeBatons {'pour': 25, 'contre': 60, 'sans opinion': 15}, 100</pre>
 	<p>Le second paramètre est un facteur d'échelle sur l'axe des ordonnées</p>
 	<p>Variante si le caractère est quantitatif:</p>
-	<pre class="copier1">lancers = new Sac []
-lancers.ajoute dé(6) for n in [1..100]
+	<pre class="copier1">lancers = nouveau Sac []
+lancers.ajoute dé(6) pour n dans [1..100]
 diagrammeBatonsTrie lancers.effectifs , 40</pre>
 	<h5>Histogramme</h5>
 	<p>Pour dessiner un histogramme, il faut une liste de nombres, les bornes d'un intervalle 
 	et le nombre de rectangles :</p>
-	<pre class="copier1">carrés = (x*x for x in [0..100])
+	<pre class="copier1">carrés = (x*x pour x dans [0..100])
 histogramme carrés, 0, 10000, 10, 40</pre>
 <div class="figure">
 
@@ -941,6 +942,63 @@ Math.min.apply  null,L</pre>
 	<pre class="copier1">laMédianeDe</pre>
 </div>
 
+<div id="complexes">
+	<h2>Nombres complexes</h2>
+	<h3>Définition</h3>
+	<p>Pour créer le complexe z=3+2i, on entre juste
+	<pre class="copier1">z = nouveau Complexe 3, 2</pre>
+	Sa partie réelle est <code>z.Re</code> et sa partie imaginaire est <code>z.Im</code>.
+	</p>
+	<h3>Fonctions</h3>
+	<h4>Conjugué</h4>
+	<p>Pour calculer le conjugué de 3+2i:
+	<pre class="copier1">z = nouveau Complexe 3, 2
+affiche z.conj()</pre>
+	</p>
+	<h4>Inverse</h4>
+	<p>L'inverse de z est <code>z.inverse()</code>:
+	<pre class="copier1">z = nouveau Complexe 3, 4
+affiche z.inverse()</pre>
+	</p>
+	<h4>Module</h4>
+	<p>On peut calculer le module d'un nnombre complexe et le carré du module:
+	<pre class="copier1">z = nouveau Complexe 3, 4
+affiche z.module()
+affiche z.modCarre()</pre>
+	</p>
+	<h4>Argument</h4>
+	<p>L'argument d'un nombre complexe est donné en valeur principale en radians:
+	<pre class="copier1">z = nouveau Complexe racine(3), 1
+affiche z.argument()</pre>
+	</p>
+	<h3>Opérations</h3>
+	<h4>Addition</h4>
+	<p>Pour additionner deux complexes on utilise ".plus" (attention au point):
+	<pre class="copier1">a = nouveau Complexe 3, 2
+b = nouveau Complexe 3, 4
+affiche a.plus b</pre>
+	</p>
+	<h4>Soustraction</h4>
+	<p>Pour soustraire deux complexes on utilise ".moins":
+	<pre class="copier1">a = nouveau Complexe 3, 2
+b = nouveau Complexe 3, 4
+affiche a.moins b</pre>
+	</p>
+	<h4>Multiplication</h4>
+	<p>Pour multiplier deux complexes on utilise ".fois":
+	<pre class="copier1">a = nouveau Complexe 3, 2
+b = nouveau Complexe 3, 4
+affiche a.fois b</pre>
+	</p>
+	<h4>Division</h4>
+	<p>Pour diviser deux complexes on utilise ".sur" (attention au point):
+	<pre class="copier1">a = nouveau Complexe 3, 2
+b = nouveau Complexe 3, 4
+affiche a.sur b</pre>
+	</p>
+	
+</div>
+
 <div id="sylvester">
 	<h2>Matrices</h2>
 	<h3>Vecteurs</h3>
@@ -961,7 +1019,7 @@ u.subtract v</pre>
 	<p>u.x 3</p>
 	<h4>Coordonnées polaires</h4>
 	<p>Pour calculer le produit scalaire de deux vecteurs, on utilise <code>dot</code>:</p>
-	<pre class="copier2">liste = (Vector.Random(2).dot(Vector.Random(2)) for n in [0...10000])
+	<pre class="copier2">liste = (Vector.Random(2).dot(Vector.Random(2)) pour n dans [0...10000])
 histogramme liste, 0, 2, 10, 4000</pre>
 	<p>Ce script donne l'histogramme des produits scalaires de deux vecteurs aléatoires de 
 	coordonnées uniformes sur [0;1]:</p>
@@ -971,7 +1029,7 @@ histogramme liste, 0, 2, 10, 4000</pre>
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="100%" height="100%"><line stroke-width="1" stroke="black" y2="440" x2="620" y1="440" x1="20"></line><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="184" width="50" y="256" x="70"></rect><text fill="black" y="460" x="70">0</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="251.70000000000002" width="50" y="188.29999999999998" x="120"></rect><text fill="black" y="460" x="120">0,2</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="217.60000000000002" width="50" y="222.39999999999998" x="170"></rect><text fill="black" y="460" x="170">0,4</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="169.3" width="50" y="270.7" x="220"></rect><text fill="black" y="460" x="220">0,6</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="102.80000000000001" width="50" y="337.2" x="270"></rect><text fill="black" y="460" x="270">0,8</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="48" width="50" y="392" x="320"></rect><text fill="black" y="460" x="320">1</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="19.5" width="50" y="420.5" x="370"></rect><text fill="black" y="460" x="370">1,2</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="5.9" width="50" y="434.1" x="420"></rect><text fill="black" y="460" x="420">1,4</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="1.2000000000000002" width="50" y="438.8" x="470"></rect><text fill="black" y="460" x="470">1,6</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="0" width="50" y="440" x="520"></rect><text fill="black" y="460" x="520">1,8</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="0" width="50" y="440" x="570"></rect><text fill="black" y="460" x="570">2</text></svg>	
 </div>
 	<p>Pour calculer la longueur d'un vecteur, on utilise <code>modulus</code>. Pour afficher la distribution statistique de la longueur d'un vecteur de coordonnées uniformes sur [0;1]:</p>
-	<pre class="copier2">liste = (Vector.Random(2).modulus() for n in [0...10000])
+	<pre class="copier2">liste = (Vector.Random(2).modulus() pour n dans [0...10000])
 histogramme liste, 0, 1, 10, 2000</pre>
 	<p>L'histogramme est surprenant:</p>
 
@@ -980,7 +1038,7 @@ histogramme liste, 0, 1, 10, 2000</pre>
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="100%" height="100%"><line stroke-width="1" stroke="black" y2="440" x2="620" y1="440" x1="20"></line><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="14" width="50" y="426" x="70"></rect><text fill="black" y="460" x="70">0</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="42.800000000000004" width="50" y="397.2" x="120"></rect><text fill="black" y="460" x="120">0,1</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="82.80000000000001" width="50" y="357.2" x="170"></rect><text fill="black" y="460" x="170">0,2</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="115.4" width="50" y="324.6" x="220"></rect><text fill="black" y="460" x="220">0,3</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="139.4" width="50" y="300.6" x="270"></rect><text fill="black" y="460" x="270">0,4</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="176.4" width="50" y="263.6" x="320"></rect><text fill="black" y="460" x="320">0,5</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="224.20000000000002" width="50" y="215.79999999999998" x="370"></rect><text fill="black" y="460" x="370">0,6</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="226" width="50" y="214" x="420"></rect><text fill="black" y="460" x="420">0,7</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="268" width="50" y="172" x="470"></rect><text fill="black" y="460" x="470">0,8</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="290.8" width="50" y="149.2" x="520"></rect><text fill="black" y="460" x="520">0,9</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="200.8" width="50" y="239.2" x="570"></rect><text fill="black" y="460" x="570">1</text></svg>	
 </div>
 	<p>Pour calculer l'angle entre deux vecteurs, on utilise <code>angleFrom()</code>:</p>
-	<pre class="copier2">liste = (Vector.Random(2).angleFrom(Vector.Random(2)) for n in [0...10000])
+	<pre class="copier2">liste = (Vector.Random(2).angleFrom(Vector.Random(2)) pour n dans [0...10000])
 histogramme liste, 0, 2, 10, 4000</pre>
 	<p>Ce script affiche l'histogramme des angles entre deux vecteurs:</p>
 <div class="figure">
@@ -1075,31 +1133,30 @@ affiche (A.inv().x B).inspect()</pre>
 	<h4>suite de Collatz</h4>
 	<pre class="copier2">
 u = 35
-until u is 1
-    if u%2 is 0
+jusqu'à ce que u == 1
+    si u%2 est 0
         u /= 2
-    else
+    sinon
         u = 3*u+1
     affiche u
 	</pre>
 	<h4>Graphique</h4>
 	<pre class="copier2">u = 35
 Collatz = [u]
-until u is 1
-    if u%2 is 0
+jusqu'à ce que u == 1
+    si u%2 est 0
         u /= 2
-    else
+    sinon
         u = 3*u+1
     Collatz.push u
 
 Syr = {}
-for n in [0...Collatz.length]
+pour n dans [0...Collatz.length]
     Syr[n]=Collatz[n]
 trierDansTableau Syr
 
 dessineSuite Collatz, Collatz.length-1, 0, 200, 3, 'red'
-
-	</pre>
+</pre>
 <div class="figure">
 
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="100%" height="100%"><line stroke-width="1" stroke="black" y2="440" x2="620" y1="440" x1="40"></line><line stroke-width="1" stroke="black" y2="435" x2="610" y1="440" x1="620"></line><line stroke-width="1" stroke="black" y2="445" x2="610" y1="440" x1="620"></line><text fill="black" y="470" x="40">0</text><line stroke-width="1" stroke="black" y2="450" x2="40" y1="440" x1="40"></line><line stroke-width="1" stroke="black" y2="444" x2="43.84615384615385" y1="440" x1="43.84615384615385"></line><line stroke-width="1" stroke="black" y2="444" x2="47.69230769230769" y1="440" x1="47.69230769230769"></line><line stroke-width="1" stroke="black" y2="444" x2="51.53846153846154" y1="440" x1="51.53846153846154"></line><line stroke-width="1" stroke="black" y2="444" x2="55.38461538461539" y1="440" x1="55.38461538461539"></line><line stroke-width="1" stroke="black" y2="447" x2="59.23076923076923" y1="440" x1="59.23076923076923"></line><line stroke-width="1" stroke="black" y2="444" x2="63.07692307692308" y1="440" x1="63.07692307692308"></line><line stroke-width="1" stroke="black" y2="444" x2="66.92307692307692" y1="440" x1="66.92307692307692"></line><line stroke-width="1" stroke="black" y2="444" x2="70.76923076923076" y1="440" x1="70.76923076923076"></line><line stroke-width="1" stroke="black" y2="444" x2="74.6153846153846" y1="440" x1="74.6153846153846"></line><text fill="black" y="470" x="78.46153846153844">1</text><line stroke-width="1" stroke="black" y2="450" x2="78.46153846153844" y1="440" x1="78.46153846153844"></line><line stroke-width="1" stroke="black" y2="444" x2="82.30769230769228" y1="440" x1="82.30769230769228"></line><line stroke-width="1" stroke="black" y2="444" x2="86.15384615384612" y1="440" x1="86.15384615384612"></line><line stroke-width="1" stroke="black" y2="444" x2="89.99999999999996" y1="440" x1="89.99999999999996"></line><line stroke-width="1" stroke="black" y2="444" x2="93.8461538461538" y1="440" x1="93.8461538461538"></line><line stroke-width="1" stroke="black" y2="447" x2="97.69230769230764" y1="440" x1="97.69230769230764"></line><line stroke-width="1" stroke="black" y2="444" x2="101.53846153846148" y1="440" x1="101.53846153846148"></line><line stroke-width="1" stroke="black" y2="444" x2="105.38461538461532" y1="440" x1="105.38461538461532"></line><line stroke-width="1" stroke="black" y2="444" x2="109.23076923076916" y1="440" x1="109.23076923076916"></line><line stroke-width="1" stroke="black" y2="444" x2="113.076923076923" y1="440" x1="113.076923076923"></line><text fill="black" y="470" x="116.92307692307683">2</text><line stroke-width="1" stroke="black" y2="450" x2="116.92307692307683" y1="440" x1="116.92307692307683"></line><line stroke-width="1" stroke="black" y2="444" x2="120.76923076923067" y1="440" x1="120.76923076923067"></line><line stroke-width="1" stroke="black" y2="444" x2="124.61538461538451" y1="440" x1="124.61538461538451"></line><line stroke-width="1" stroke="black" y2="444" x2="128.46153846153837" y1="440" x1="128.46153846153837"></line><line stroke-width="1" stroke="black" y2="444" x2="132.3076923076922" y1="440" x1="132.3076923076922"></line><line stroke-width="1" stroke="black" y2="447" x2="136.15384615384605" y1="440" x1="136.15384615384605"></line><line stroke-width="1" stroke="black" y2="444" x2="139.9999999999999" y1="440" x1="139.9999999999999"></line><line stroke-width="1" stroke="black" y2="444" x2="143.84615384615373" y1="440" x1="143.84615384615373"></line><line stroke-width="1" stroke="black" y2="444" x2="147.69230769230757" y1="440" x1="147.69230769230757"></line><line stroke-width="1" stroke="black" y2="444" x2="151.5384615384614" y1="440" x1="151.5384615384614"></line><text fill="black" y="470" x="155.38461538461524">3</text><line stroke-width="1" stroke="black" y2="450" x2="155.38461538461524" y1="440" x1="155.38461538461524"></line><line stroke-width="1" stroke="black" y2="444" x2="159.23076923076908" y1="440" x1="159.23076923076908"></line><line stroke-width="1" stroke="black" y2="444" x2="163.07692307692292" y1="440" x1="163.07692307692292"></line><line stroke-width="1" stroke="black" y2="444" x2="166.92307692307676" y1="440" x1="166.92307692307676"></line><line stroke-width="1" stroke="black" y2="444" x2="170.7692307692306" y1="440" x1="170.7692307692306"></line><line stroke-width="1" stroke="black" y2="447" x2="174.61538461538444" y1="440" x1="174.61538461538444"></line><line stroke-width="1" stroke="black" y2="444" x2="178.46153846153828" y1="440" x1="178.46153846153828"></line><line stroke-width="1" stroke="black" y2="444" x2="182.30769230769212" y1="440" x1="182.30769230769212"></line><line stroke-width="1" stroke="black" y2="444" x2="186.15384615384596" y1="440" x1="186.15384615384596"></line><line stroke-width="1" stroke="black" y2="444" x2="189.9999999999998" y1="440" x1="189.9999999999998"></line><text fill="black" y="470" x="193.84615384615364">4</text><line stroke-width="1" stroke="black" y2="450" x2="193.84615384615364" y1="440" x1="193.84615384615364"></line><line stroke-width="1" stroke="black" y2="444" x2="197.69230769230748" y1="440" x1="197.69230769230748"></line><line stroke-width="1" stroke="black" y2="444" x2="201.53846153846132" y1="440" x1="201.53846153846132"></line><line stroke-width="1" stroke="black" y2="444" x2="205.38461538461516" y1="440" x1="205.38461538461516"></line><line stroke-width="1" stroke="black" y2="444" x2="209.230769230769" y1="440" x1="209.230769230769"></line><line stroke-width="1" stroke="black" y2="447" x2="213.07692307692284" y1="440" x1="213.07692307692284"></line><line stroke-width="1" stroke="black" y2="444" x2="216.92307692307668" y1="440" x1="216.92307692307668"></line><line stroke-width="1" stroke="black" y2="444" x2="220.76923076923052" y1="440" x1="220.76923076923052"></line><line stroke-width="1" stroke="black" y2="444" x2="224.61538461538436" y1="440" x1="224.61538461538436"></line><line stroke-width="1" stroke="black" y2="444" x2="228.4615384615382" y1="440" x1="228.4615384615382"></line><text fill="black" y="470" x="232.30769230769204">5</text><line stroke-width="1" stroke="black" y2="450" x2="232.30769230769204" y1="440" x1="232.30769230769204"></line><line stroke-width="1" stroke="black" y2="444" x2="236.15384615384588" y1="440" x1="236.15384615384588"></line><line stroke-width="1" stroke="black" y2="444" x2="239.99999999999972" y1="440" x1="239.99999999999972"></line><line stroke-width="1" stroke="black" y2="444" x2="243.84615384615356" y1="440" x1="243.84615384615356"></line><line stroke-width="1" stroke="black" y2="444" x2="247.6923076923074" y1="440" x1="247.6923076923074"></line><line stroke-width="1" stroke="black" y2="447" x2="251.53846153846123" y1="440" x1="251.53846153846123"></line><line stroke-width="1" stroke="black" y2="444" x2="255.38461538461507" y1="440" x1="255.38461538461507"></line><line stroke-width="1" stroke="black" y2="444" x2="259.23076923076894" y1="440" x1="259.23076923076894"></line><line stroke-width="1" stroke="black" y2="444" x2="263.0769230769228" y1="440" x1="263.0769230769228"></line><line stroke-width="1" stroke="black" y2="444" x2="266.9230769230767" y1="440" x1="266.9230769230767"></line><text fill="black" y="470" x="270.76923076923055">6</text><line stroke-width="1" stroke="black" y2="450" x2="270.76923076923055" y1="440" x1="270.76923076923055"></line><line stroke-width="1" stroke="black" y2="444" x2="274.6153846153844" y1="440" x1="274.6153846153844"></line><line stroke-width="1" stroke="black" y2="444" x2="278.4615384615383" y1="440" x1="278.4615384615383"></line><line stroke-width="1" stroke="black" y2="444" x2="282.30769230769215" y1="440" x1="282.30769230769215"></line><line stroke-width="1" stroke="black" y2="444" x2="286.153846153846" y1="440" x1="286.153846153846"></line><line stroke-width="1" stroke="black" y2="447" x2="289.9999999999999" y1="440" x1="289.9999999999999"></line><line stroke-width="1" stroke="black" y2="444" x2="293.84615384615375" y1="440" x1="293.84615384615375"></line><line stroke-width="1" stroke="black" y2="444" x2="297.6923076923076" y1="440" x1="297.6923076923076"></line><line stroke-width="1" stroke="black" y2="444" x2="301.5384615384615" y1="440" x1="301.5384615384615"></line><line stroke-width="1" stroke="black" y2="444" x2="305.38461538461536" y1="440" x1="305.38461538461536"></line><text fill="black" y="470" x="309.2307692307692">7</text><line stroke-width="1" stroke="black" y2="450" x2="309.2307692307692" y1="440" x1="309.2307692307692"></line><line stroke-width="1" stroke="black" y2="444" x2="313.0769230769231" y1="440" x1="313.0769230769231"></line><line stroke-width="1" stroke="black" y2="444" x2="316.92307692307696" y1="440" x1="316.92307692307696"></line><line stroke-width="1" stroke="black" y2="444" x2="320.76923076923083" y1="440" x1="320.76923076923083"></line><line stroke-width="1" stroke="black" y2="444" x2="324.6153846153847" y1="440" x1="324.6153846153847"></line><line stroke-width="1" stroke="black" y2="447" x2="328.46153846153857" y1="440" x1="328.46153846153857"></line><line stroke-width="1" stroke="black" y2="444" x2="332.30769230769243" y1="440" x1="332.30769230769243"></line><line stroke-width="1" stroke="black" y2="444" x2="336.1538461538463" y1="440" x1="336.1538461538463"></line><line stroke-width="1" stroke="black" y2="444" x2="340.00000000000017" y1="440" x1="340.00000000000017"></line><line stroke-width="1" stroke="black" y2="444" x2="343.84615384615404" y1="440" x1="343.84615384615404"></line><text fill="black" y="470" x="347.6923076923079">8</text><line stroke-width="1" stroke="black" y2="450" x2="347.6923076923079" y1="440" x1="347.6923076923079"></line><line stroke-width="1" stroke="black" y2="444" x2="351.5384615384618" y1="440" x1="351.5384615384618"></line><line stroke-width="1" stroke="black" y2="444" x2="355.38461538461564" y1="440" x1="355.38461538461564"></line><line stroke-width="1" stroke="black" y2="444" x2="359.2307692307695" y1="440" x1="359.2307692307695"></line><line stroke-width="1" stroke="black" y2="444" x2="363.0769230769234" y1="440" x1="363.0769230769234"></line><line stroke-width="1" stroke="black" y2="447" x2="366.92307692307725" y1="440" x1="366.92307692307725"></line><line stroke-width="1" stroke="black" y2="444" x2="370.7692307692311" y1="440" x1="370.7692307692311"></line><line stroke-width="1" stroke="black" y2="444" x2="374.615384615385" y1="440" x1="374.615384615385"></line><line stroke-width="1" stroke="black" y2="444" x2="378.46153846153885" y1="440" x1="378.46153846153885"></line><line stroke-width="1" stroke="black" y2="444" x2="382.3076923076927" y1="440" x1="382.3076923076927"></line><text fill="black" y="470" x="386.1538461538466">9</text><line stroke-width="1" stroke="black" y2="450" x2="386.1538461538466" y1="440" x1="386.1538461538466"></line><line stroke-width="1" stroke="black" y2="444" x2="390.00000000000045" y1="440" x1="390.00000000000045"></line><line stroke-width="1" stroke="black" y2="444" x2="393.8461538461543" y1="440" x1="393.8461538461543"></line><line stroke-width="1" stroke="black" y2="444" x2="397.6923076923082" y1="440" x1="397.6923076923082"></line><line stroke-width="1" stroke="black" y2="444" x2="401.53846153846206" y1="440" x1="401.53846153846206"></line><line stroke-width="1" stroke="black" y2="447" x2="405.3846153846159" y1="440" x1="405.3846153846159"></line><line stroke-width="1" stroke="black" y2="444" x2="409.2307692307698" y1="440" x1="409.2307692307698"></line><line stroke-width="1" stroke="black" y2="444" x2="413.07692307692366" y1="440" x1="413.07692307692366"></line><line stroke-width="1" stroke="black" y2="444" x2="416.92307692307753" y1="440" x1="416.92307692307753"></line><line stroke-width="1" stroke="black" y2="444" x2="420.7692307692314" y1="440" x1="420.7692307692314"></line><text fill="black" y="470" x="424.61538461538527">10</text><line stroke-width="1" stroke="black" y2="450" x2="424.61538461538527" y1="440" x1="424.61538461538527"></line><line stroke-width="1" stroke="black" y2="444" x2="428.46153846153913" y1="440" x1="428.46153846153913"></line><line stroke-width="1" stroke="black" y2="444" x2="432.307692307693" y1="440" x1="432.307692307693"></line><line stroke-width="1" stroke="black" y2="444" x2="436.15384615384687" y1="440" x1="436.15384615384687"></line><line stroke-width="1" stroke="black" y2="444" x2="440.00000000000074" y1="440" x1="440.00000000000074"></line><line stroke-width="1" stroke="black" y2="447" x2="443.8461538461546" y1="440" x1="443.8461538461546"></line><line stroke-width="1" stroke="black" y2="444" x2="447.6923076923085" y1="440" x1="447.6923076923085"></line><line stroke-width="1" stroke="black" y2="444" x2="451.53846153846234" y1="440" x1="451.53846153846234"></line><line stroke-width="1" stroke="black" y2="444" x2="455.3846153846162" y1="440" x1="455.3846153846162"></line><line stroke-width="1" stroke="black" y2="444" x2="459.2307692307701" y1="440" x1="459.2307692307701"></line><text fill="black" y="470" x="463.07692307692395">11</text><line stroke-width="1" stroke="black" y2="450" x2="463.07692307692395" y1="440" x1="463.07692307692395"></line><line stroke-width="1" stroke="black" y2="444" x2="466.9230769230778" y1="440" x1="466.9230769230778"></line><line stroke-width="1" stroke="black" y2="444" x2="470.7692307692317" y1="440" x1="470.7692307692317"></line><line stroke-width="1" stroke="black" y2="444" x2="474.61538461538555" y1="440" x1="474.61538461538555"></line><line stroke-width="1" stroke="black" y2="444" x2="478.4615384615394" y1="440" x1="478.4615384615394"></line><line stroke-width="1" stroke="black" y2="447" x2="482.3076923076933" y1="440" x1="482.3076923076933"></line><line stroke-width="1" stroke="black" y2="444" x2="486.15384615384716" y1="440" x1="486.15384615384716"></line><line stroke-width="1" stroke="black" y2="444" x2="490.000000000001" y1="440" x1="490.000000000001"></line><line stroke-width="1" stroke="black" y2="444" x2="493.8461538461549" y1="440" x1="493.8461538461549"></line><line stroke-width="1" stroke="black" y2="444" x2="497.69230769230876" y1="440" x1="497.69230769230876"></line><text fill="black" y="470" x="501.5384615384626">12</text><line stroke-width="1" stroke="black" y2="450" x2="501.5384615384626" y1="440" x1="501.5384615384626"></line><line stroke-width="1" stroke="black" y2="444" x2="505.3846153846165" y1="440" x1="505.3846153846165"></line><line stroke-width="1" stroke="black" y2="444" x2="509.23076923077036" y1="440" x1="509.23076923077036"></line><line stroke-width="1" stroke="black" y2="444" x2="513.0769230769242" y1="440" x1="513.0769230769242"></line><line stroke-width="1" stroke="black" y2="444" x2="516.923076923078" y1="440" x1="516.923076923078"></line><line stroke-width="1" stroke="black" y2="447" x2="520.7692307692319" y1="440" x1="520.7692307692319"></line><line stroke-width="1" stroke="black" y2="444" x2="524.6153846153857" y1="440" x1="524.6153846153857"></line><line stroke-width="1" stroke="black" y2="444" x2="528.4615384615395" y1="440" x1="528.4615384615395"></line><line stroke-width="1" stroke="black" y2="444" x2="532.3076923076933" y1="440" x1="532.3076923076933"></line><line stroke-width="1" stroke="black" y2="444" x2="536.1538461538471" y1="440" x1="536.1538461538471"></line><text fill="black" y="470" x="540.0000000000009">13</text><line stroke-width="1" stroke="black" y2="450" x2="540.0000000000009" y1="440" x1="540.0000000000009"></line><line stroke-width="1" stroke="black" y2="20" x2="40" y1="440" x1="40"></line><line stroke-width="1" stroke="black" y2="30" x2="35" y1="20" x1="40"></line><line stroke-width="1" stroke="black" y2="30" x2="45" y1="20" x1="40"></line><text fill="black" y="440" x="10">0</text><line stroke-width="1" stroke="black" y2="440" x2="30" y1="440" x1="40"></line><line stroke-width="1" stroke="black" y2="438" x2="36" y1="438" x1="40"></line><line stroke-width="1" stroke="black" y2="436" x2="36" y1="436" x1="40"></line><line stroke-width="1" stroke="black" y2="434" x2="36" y1="434" x1="40"></line><line stroke-width="1" stroke="black" y2="432" x2="36" y1="432" x1="40"></line><line stroke-width="1" stroke="black" y2="430" x2="33" y1="430" x1="40"></line><line stroke-width="1" stroke="black" y2="428" x2="36" y1="428" x1="40"></line><line stroke-width="1" stroke="black" y2="426" x2="36" y1="426" x1="40"></line><line stroke-width="1" stroke="black" y2="424" x2="36" y1="424" x1="40"></line><line stroke-width="1" stroke="black" y2="422" x2="36" y1="422" x1="40"></line><text fill="black" y="420" x="10">10</text><line stroke-width="1" stroke="black" y2="420" x2="30" y1="420" x1="40"></line><line stroke-width="1" stroke="black" y2="418" x2="36" y1="418" x1="40"></line><line stroke-width="1" stroke="black" y2="416" x2="36" y1="416" x1="40"></line><line stroke-width="1" stroke="black" y2="414" x2="36" y1="414" x1="40"></line><line stroke-width="1" stroke="black" y2="412" x2="36" y1="412" x1="40"></line><line stroke-width="1" stroke="black" y2="410" x2="33" y1="410" x1="40"></line><line stroke-width="1" stroke="black" y2="408" x2="36" y1="408" x1="40"></line><line stroke-width="1" stroke="black" y2="406" x2="36" y1="406" x1="40"></line><line stroke-width="1" stroke="black" y2="404" x2="36" y1="404" x1="40"></line><line stroke-width="1" stroke="black" y2="402" x2="36" y1="402" x1="40"></line><text fill="black" y="400" x="10">20</text><line stroke-width="1" stroke="black" y2="400" x2="30" y1="400" x1="40"></line><line stroke-width="1" stroke="black" y2="398" x2="36" y1="398" x1="40"></line><line stroke-width="1" stroke="black" y2="396" x2="36" y1="396" x1="40"></line><line stroke-width="1" stroke="black" y2="394" x2="36" y1="394" x1="40"></line><line stroke-width="1" stroke="black" y2="392" x2="36" y1="392" x1="40"></line><line stroke-width="1" stroke="black" y2="390" x2="33" y1="390" x1="40"></line><line stroke-width="1" stroke="black" y2="388" x2="36" y1="388" x1="40"></line><line stroke-width="1" stroke="black" y2="386" x2="36" y1="386" x1="40"></line><line stroke-width="1" stroke="black" y2="384" x2="36" y1="384" x1="40"></line><line stroke-width="1" stroke="black" y2="382" x2="36" y1="382" x1="40"></line><text fill="black" y="380" x="10">30</text><line stroke-width="1" stroke="black" y2="380" x2="30" y1="380" x1="40"></line><line stroke-width="1" stroke="black" y2="378" x2="36" y1="378" x1="40"></line><line stroke-width="1" stroke="black" y2="376" x2="36" y1="376" x1="40"></line><line stroke-width="1" stroke="black" y2="374" x2="36" y1="374" x1="40"></line><line stroke-width="1" stroke="black" y2="372" x2="36" y1="372" x1="40"></line><line stroke-width="1" stroke="black" y2="370" x2="33" y1="370" x1="40"></line><line stroke-width="1" stroke="black" y2="368" x2="36" y1="368" x1="40"></line><line stroke-width="1" stroke="black" y2="366" x2="36" y1="366" x1="40"></line><line stroke-width="1" stroke="black" y2="364" x2="36" y1="364" x1="40"></line><line stroke-width="1" stroke="black" y2="362" x2="36" y1="362" x1="40"></line><text fill="black" y="360" x="10">40</text><line stroke-width="1" stroke="black" y2="360" x2="30" y1="360" x1="40"></line><line stroke-width="1" stroke="black" y2="358" x2="36" y1="358" x1="40"></line><line stroke-width="1" stroke="black" y2="356" x2="36" y1="356" x1="40"></line><line stroke-width="1" stroke="black" y2="354" x2="36" y1="354" x1="40"></line><line stroke-width="1" stroke="black" y2="352" x2="36" y1="352" x1="40"></line><line stroke-width="1" stroke="black" y2="350" x2="33" y1="350" x1="40"></line><line stroke-width="1" stroke="black" y2="348" x2="36" y1="348" x1="40"></line><line stroke-width="1" stroke="black" y2="346" x2="36" y1="346" x1="40"></line><line stroke-width="1" stroke="black" y2="344" x2="36" y1="344" x1="40"></line><line stroke-width="1" stroke="black" y2="342" x2="36" y1="342" x1="40"></line><text fill="black" y="340" x="10">50</text><line stroke-width="1" stroke="black" y2="340" x2="30" y1="340" x1="40"></line><line stroke-width="1" stroke="black" y2="338" x2="36" y1="338" x1="40"></line><line stroke-width="1" stroke="black" y2="336" x2="36" y1="336" x1="40"></line><line stroke-width="1" stroke="black" y2="334" x2="36" y1="334" x1="40"></line><line stroke-width="1" stroke="black" y2="332" x2="36" y1="332" x1="40"></line><line stroke-width="1" stroke="black" y2="330" x2="33" y1="330" x1="40"></line><line stroke-width="1" stroke="black" y2="328" x2="36" y1="328" x1="40"></line><line stroke-width="1" stroke="black" y2="326" x2="36" y1="326" x1="40"></line><line stroke-width="1" stroke="black" y2="324" x2="36" y1="324" x1="40"></line><line stroke-width="1" stroke="black" y2="322" x2="36" y1="322" x1="40"></line><text fill="black" y="320" x="10">60</text><line stroke-width="1" stroke="black" y2="320" x2="30" y1="320" x1="40"></line><line stroke-width="1" stroke="black" y2="318" x2="36" y1="318" x1="40"></line><line stroke-width="1" stroke="black" y2="316" x2="36" y1="316" x1="40"></line><line stroke-width="1" stroke="black" y2="314" x2="36" y1="314" x1="40"></line><line stroke-width="1" stroke="black" y2="312" x2="36" y1="312" x1="40"></line><line stroke-width="1" stroke="black" y2="310" x2="33" y1="310" x1="40"></line><line stroke-width="1" stroke="black" y2="308" x2="36" y1="308" x1="40"></line><line stroke-width="1" stroke="black" y2="306" x2="36" y1="306" x1="40"></line><line stroke-width="1" stroke="black" y2="304" x2="36" y1="304" x1="40"></line><line stroke-width="1" stroke="black" y2="302" x2="36" y1="302" x1="40"></line><text fill="black" y="300" x="10">70</text><line stroke-width="1" stroke="black" y2="300" x2="30" y1="300" x1="40"></line><line stroke-width="1" stroke="black" y2="298" x2="36" y1="298" x1="40"></line><line stroke-width="1" stroke="black" y2="296" x2="36" y1="296" x1="40"></line><line stroke-width="1" stroke="black" y2="294" x2="36" y1="294" x1="40"></line><line stroke-width="1" stroke="black" y2="292" x2="36" y1="292" x1="40"></line><line stroke-width="1" stroke="black" y2="290" x2="33" y1="290" x1="40"></line><line stroke-width="1" stroke="black" y2="288" x2="36" y1="288" x1="40"></line><line stroke-width="1" stroke="black" y2="286" x2="36" y1="286" x1="40"></line><line stroke-width="1" stroke="black" y2="284" x2="36" y1="284" x1="40"></line><line stroke-width="1" stroke="black" y2="282" x2="36" y1="282" x1="40"></line><text fill="black" y="280" x="10">80</text><line stroke-width="1" stroke="black" y2="280" x2="30" y1="280" x1="40"></line><line stroke-width="1" stroke="black" y2="278" x2="36" y1="278" x1="40"></line><line stroke-width="1" stroke="black" y2="276" x2="36" y1="276" x1="40"></line><line stroke-width="1" stroke="black" y2="274" x2="36" y1="274" x1="40"></line><line stroke-width="1" stroke="black" y2="272" x2="36" y1="272" x1="40"></line><line stroke-width="1" stroke="black" y2="270" x2="33" y1="270" x1="40"></line><line stroke-width="1" stroke="black" y2="268" x2="36" y1="268" x1="40"></line><line stroke-width="1" stroke="black" y2="266" x2="36" y1="266" x1="40"></line><line stroke-width="1" stroke="black" y2="264" x2="36" y1="264" x1="40"></line><line stroke-width="1" stroke="black" y2="262" x2="36" y1="262" x1="40"></line><text fill="black" y="260" x="10">90</text><line stroke-width="1" stroke="black" y2="260" x2="30" y1="260" x1="40"></line><line stroke-width="1" stroke="black" y2="258" x2="36" y1="258" x1="40"></line><line stroke-width="1" stroke="black" y2="256" x2="36" y1="256" x1="40"></line><line stroke-width="1" stroke="black" y2="254" x2="36" y1="254" x1="40"></line><line stroke-width="1" stroke="black" y2="252" x2="36" y1="252" x1="40"></line><line stroke-width="1" stroke="black" y2="250" x2="33" y1="250" x1="40"></line><line stroke-width="1" stroke="black" y2="248" x2="36" y1="248" x1="40"></line><line stroke-width="1" stroke="black" y2="246" x2="36" y1="246" x1="40"></line><line stroke-width="1" stroke="black" y2="244" x2="36" y1="244" x1="40"></line><line stroke-width="1" stroke="black" y2="242" x2="36" y1="242" x1="40"></line><text fill="black" y="240" x="10">100</text><line stroke-width="1" stroke="black" y2="240" x2="30" y1="240" x1="40"></line><line stroke-width="1" stroke="black" y2="238" x2="36" y1="238" x1="40"></line><line stroke-width="1" stroke="black" y2="236" x2="36" y1="236" x1="40"></line><line stroke-width="1" stroke="black" y2="234" x2="36" y1="234" x1="40"></line><line stroke-width="1" stroke="black" y2="232" x2="36" y1="232" x1="40"></line><line stroke-width="1" stroke="black" y2="230" x2="33" y1="230" x1="40"></line><line stroke-width="1" stroke="black" y2="228" x2="36" y1="228" x1="40"></line><line stroke-width="1" stroke="black" y2="226" x2="36" y1="226" x1="40"></line><line stroke-width="1" stroke="black" y2="224" x2="36" y1="224" x1="40"></line><line stroke-width="1" stroke="black" y2="222" x2="36" y1="222" x1="40"></line><text fill="black" y="220" x="10">110</text><line stroke-width="1" stroke="black" y2="220" x2="30" y1="220" x1="40"></line><line stroke-width="1" stroke="black" y2="218" x2="36" y1="218" x1="40"></line><line stroke-width="1" stroke="black" y2="216" x2="36" y1="216" x1="40"></line><line stroke-width="1" stroke="black" y2="214" x2="36" y1="214" x1="40"></line><line stroke-width="1" stroke="black" y2="212" x2="36" y1="212" x1="40"></line><line stroke-width="1" stroke="black" y2="210" x2="33" y1="210" x1="40"></line><line stroke-width="1" stroke="black" y2="208" x2="36" y1="208" x1="40"></line><line stroke-width="1" stroke="black" y2="206" x2="36" y1="206" x1="40"></line><line stroke-width="1" stroke="black" y2="204" x2="36" y1="204" x1="40"></line><line stroke-width="1" stroke="black" y2="202" x2="36" y1="202" x1="40"></line><text fill="black" y="200" x="10">120</text><line stroke-width="1" stroke="black" y2="200" x2="30" y1="200" x1="40"></line><line stroke-width="1" stroke="black" y2="198" x2="36" y1="198" x1="40"></line><line stroke-width="1" stroke="black" y2="196" x2="36" y1="196" x1="40"></line><line stroke-width="1" stroke="black" y2="194" x2="36" y1="194" x1="40"></line><line stroke-width="1" stroke="black" y2="192" x2="36" y1="192" x1="40"></line><line stroke-width="1" stroke="black" y2="190" x2="33" y1="190" x1="40"></line><line stroke-width="1" stroke="black" y2="188" x2="36" y1="188" x1="40"></line><line stroke-width="1" stroke="black" y2="186" x2="36" y1="186" x1="40"></line><line stroke-width="1" stroke="black" y2="184" x2="36" y1="184" x1="40"></line><line stroke-width="1" stroke="black" y2="182" x2="36" y1="182" x1="40"></line><text fill="black" y="180" x="10">130</text><line stroke-width="1" stroke="black" y2="180" x2="30" y1="180" x1="40"></line><line stroke-width="1" stroke="black" y2="178" x2="36" y1="178" x1="40"></line><line stroke-width="1" stroke="black" y2="176" x2="36" y1="176" x1="40"></line><line stroke-width="1" stroke="black" y2="174" x2="36" y1="174" x1="40"></line><line stroke-width="1" stroke="black" y2="172" x2="36" y1="172" x1="40"></line><line stroke-width="1" stroke="black" y2="170" x2="33" y1="170" x1="40"></line><line stroke-width="1" stroke="black" y2="168" x2="36" y1="168" x1="40"></line><line stroke-width="1" stroke="black" y2="166" x2="36" y1="166" x1="40"></line><line stroke-width="1" stroke="black" y2="164" x2="36" y1="164" x1="40"></line><line stroke-width="1" stroke="black" y2="162" x2="36" y1="162" x1="40"></line><text fill="black" y="160" x="10">140</text><line stroke-width="1" stroke="black" y2="160" x2="30" y1="160" x1="40"></line><line stroke-width="1" stroke="black" y2="158" x2="36" y1="158" x1="40"></line><line stroke-width="1" stroke="black" y2="156" x2="36" y1="156" x1="40"></line><line stroke-width="1" stroke="black" y2="154" x2="36" y1="154" x1="40"></line><line stroke-width="1" stroke="black" y2="152" x2="36" y1="152" x1="40"></line><line stroke-width="1" stroke="black" y2="150" x2="33" y1="150" x1="40"></line><line stroke-width="1" stroke="black" y2="148" x2="36" y1="148" x1="40"></line><line stroke-width="1" stroke="black" y2="146" x2="36" y1="146" x1="40"></line><line stroke-width="1" stroke="black" y2="144" x2="36" y1="144" x1="40"></line><line stroke-width="1" stroke="black" y2="142" x2="36" y1="142" x1="40"></line><text fill="black" y="140" x="10">150</text><line stroke-width="1" stroke="black" y2="140" x2="30" y1="140" x1="40"></line><line stroke-width="1" stroke="black" y2="138" x2="36" y1="138" x1="40"></line><line stroke-width="1" stroke="black" y2="136" x2="36" y1="136" x1="40"></line><line stroke-width="1" stroke="black" y2="134" x2="36" y1="134" x1="40"></line><line stroke-width="1" stroke="black" y2="132" x2="36" y1="132" x1="40"></line><line stroke-width="1" stroke="black" y2="130" x2="33" y1="130" x1="40"></line><line stroke-width="1" stroke="black" y2="128" x2="36" y1="128" x1="40"></line><line stroke-width="1" stroke="black" y2="126" x2="36" y1="126" x1="40"></line><line stroke-width="1" stroke="black" y2="124" x2="36" y1="124" x1="40"></line><line stroke-width="1" stroke="black" y2="122" x2="36" y1="122" x1="40"></line><text fill="black" y="120" x="10">160</text><line stroke-width="1" stroke="black" y2="120" x2="30" y1="120" x1="40"></line><line stroke-width="1" stroke="black" y2="118" x2="36" y1="118" x1="40"></line><line stroke-width="1" stroke="black" y2="116" x2="36" y1="116" x1="40"></line><line stroke-width="1" stroke="black" y2="114" x2="36" y1="114" x1="40"></line><line stroke-width="1" stroke="black" y2="112" x2="36" y1="112" x1="40"></line><line stroke-width="1" stroke="black" y2="110" x2="33" y1="110" x1="40"></line><line stroke-width="1" stroke="black" y2="108" x2="36" y1="108" x1="40"></line><line stroke-width="1" stroke="black" y2="106" x2="36" y1="106" x1="40"></line><line stroke-width="1" stroke="black" y2="104" x2="36" y1="104" x1="40"></line><line stroke-width="1" stroke="black" y2="102" x2="36" y1="102" x1="40"></line><text fill="black" y="100" x="10">170</text><line stroke-width="1" stroke="black" y2="100" x2="30" y1="100" x1="40"></line><line stroke-width="1" stroke="black" y2="98" x2="36" y1="98" x1="40"></line><line stroke-width="1" stroke="black" y2="96" x2="36" y1="96" x1="40"></line><line stroke-width="1" stroke="black" y2="94" x2="36" y1="94" x1="40"></line><line stroke-width="1" stroke="black" y2="92" x2="36" y1="92" x1="40"></line><line stroke-width="1" stroke="black" y2="90" x2="33" y1="90" x1="40"></line><line stroke-width="1" stroke="black" y2="88" x2="36" y1="88" x1="40"></line><line stroke-width="1" stroke="black" y2="86" x2="36" y1="86" x1="40"></line><line stroke-width="1" stroke="black" y2="84" x2="36" y1="84" x1="40"></line><line stroke-width="1" stroke="black" y2="82" x2="36" y1="82" x1="40"></line><text fill="black" y="80" x="10">180</text><line stroke-width="1" stroke="black" y2="80" x2="30" y1="80" x1="40"></line><line stroke-width="1" stroke="black" y2="78" x2="36" y1="78" x1="40"></line><line stroke-width="1" stroke="black" y2="76" x2="36" y1="76" x1="40"></line><line stroke-width="1" stroke="black" y2="74" x2="36" y1="74" x1="40"></line><line stroke-width="1" stroke="black" y2="72" x2="36" y1="72" x1="40"></line><line stroke-width="1" stroke="black" y2="70" x2="33" y1="70" x1="40"></line><line stroke-width="1" stroke="black" y2="68" x2="36" y1="68" x1="40"></line><line stroke-width="1" stroke="black" y2="66" x2="36" y1="66" x1="40"></line><line stroke-width="1" stroke="black" y2="64" x2="36" y1="64" x1="40"></line><line stroke-width="1" stroke="black" y2="62" x2="36" y1="62" x1="40"></line><text fill="black" y="60" x="10">190</text><line stroke-width="1" stroke="black" y2="60" x2="30" y1="60" x1="40"></line><line stroke-width="1" stroke="black" y2="58" x2="36" y1="58" x1="40"></line><line stroke-width="1" stroke="black" y2="56" x2="36" y1="56" x1="40"></line><line stroke-width="1" stroke="black" y2="54" x2="36" y1="54" x1="40"></line><line stroke-width="1" stroke="black" y2="52" x2="36" y1="52" x1="40"></line><line stroke-width="1" stroke="black" y2="50" x2="33" y1="50" x1="40"></line><line stroke-width="1" stroke="black" y2="48" x2="36" y1="48" x1="40"></line><line stroke-width="1" stroke="black" y2="46" x2="36" y1="46" x1="40"></line><line stroke-width="1" stroke="black" y2="44" x2="36" y1="44" x1="40"></line><line stroke-width="1" stroke="black" y2="42" x2="36" y1="42" x1="40"></line><text fill="black" y="40" x="10">200</text><line stroke-width="1" stroke="black" y2="40" x2="30" y1="40" x1="40"></line><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="370" cx="40"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="228" cx="78.46153846153845"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="334" cx="116.9230769230769"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="120" cx="155.38461538461536"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="280" cx="193.8461538461538"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="360" cx="232.30769230769226"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="400" cx="270.7692307692307"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="420" cx="309.23076923076917"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="430" cx="347.6923076923076"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="408" cx="386.1538461538461"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="424" cx="424.6153846153845"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="432" cx="463.076923076923"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="436" cx="501.53846153846143"></circle><circle stroke-width="1" stroke="red" fill-opacity="0.4" fill="red" r="3" cy="438" cx="539.9999999999999"></circle></svg>
@@ -1108,15 +1165,15 @@ dessineSuite Collatz, Collatz.length-1, 0, 200, 3, 'red'
 	<pre class="copier2">
 vol = (n) ->
     [u, temps] = [n, 0]
-    until u is 1
-        if u%2 is 0
+    jusqu'à ce que u == 1
+        si u%2 est 0
             u /= 2
-        else
+        sinon
             u = 3*u+1
         temps++
     temps
 
-affiche (vol n for n in [2..20])
+affiche (vol n pour n dans [2..20])
 	</pre>
 </div>
 <div id="euclide">
@@ -1127,7 +1184,7 @@ affiche (vol n for n in [2..20])
 	<pre class="copier2">
 pgcd = (a,b) ->
     [x,y]=[a,b]
-    while y>0
+    jusqu'à ce que y == 0
         [x,y]=[y,x%y]
     x
 
@@ -1136,8 +1193,7 @@ affiche pgcd 55,34
 	<h4>Version CoffeeScript:</h4>
 	<pre class="copier2">
 pgcd = (x,y) ->
-    while y>0
-        [x,y]=[y,x%y]
+    [x,y]=[y,x%y] jusqu'à ce que y == 0
     x
 
 affiche pgcd 55,34
@@ -1155,17 +1211,16 @@ affiche pgcd 55,34
 	<h4>Calcul de &radic;(5)</h4>
 	<pre class="copier2">
 [a,b]=[1,5]
-until (abs b-a)<1e-16
+jusqu'à ce que -1e-16 < b-a < 1e-16
     a=(a+b)/2
     b=5/a
 affiche a
-	
 	</pre>
 	<h4>Représentation graphique</h4>
 	<p>En plaçant les approximations successives de &radic;(2) dans un tableau, on 
 	peut les représenter graphiquement, pour vérifier la convergence :</p>
 	<pre class="copier2">u=[1]
-for n in [1..20]
+pour n dans [1..20]
     u[n]=(u[n-1]+2/u[n-1])/2
 
 dessineSuite u, 20, 0, 2, 5, 'red'
@@ -1178,7 +1233,7 @@ dessineSuite u, 20, 0, 2, 5, 'red'
 	décimales de &radic;(5) :</p>
 	<pre class="copier2">Big.DP = 1000
 [a,b]=[Big(1),Big(5)]
-for n in [1..12]
+pour n dans [1..12]
     a=a.plus(b).div(2)
     b=Big(5).div(a)
 
@@ -1200,8 +1255,8 @@ affiche a</pre>
 	<pre class="copier2">Big.DP = 1000
 a = Big(5).sqrt()
 décimales = a.toString()[2..]
-stats = new Sac []
-for x in décimales
+stats = nouveau Sac []
+pour x dans décimales
     stats.ajoute parseInt(x)
 diagrammeBatonsTrie stats.effectifs, 150</pre>
 
@@ -1209,28 +1264,28 @@ diagrammeBatonsTrie stats.effectifs, 150</pre>
 
 	<h4>Fractions</h4>
 	<p>Une autre version, avec l'utilisation de fractions:</p>
-	<pre class="copier2">deux = new Fraction 2
-cinq = new Fraction 5
-[a,b]=[new Fraction(1),new Fraction(5)]
-for n in [1..12]
+	<pre class="copier2">deux = nouvelle Fraction 2
+cinq = nouvelle Fraction 5
+[a,b]=[nouvelle Fraction(1),nouvelle Fraction(5)]
+pour n dans [1..12]
     a=a.plus(b).sur(deux)
     b=cinq.sur(a)
     affiche a.toFloat()
 </pre>
 	<p>Une légère modification fournit une suite d'approximations rationnelles de la racine de 5:</p>
-	<pre class="copier2">deux = new Fraction 2
-cinq = new Fraction 5
-[a,b]=[new Fraction(1),new Fraction(5)]
-for n in [1..12]
+	<pre class="copier2">deux = nouvelle Fraction 2
+cinq = nouvelle Fraction 5
+[a,b]=[ nouvelle Fraction(1), nouvelle Fraction(5)]
+pour n dans [1..12]
     a=a.plus(b).sur(deux)
     b=cinq.sur(a)
     affiche a
 </pre>
 	<p>De même, l'algorithme est aisément transposable aux nombres complexes:</p>
-	<pre class="copier2">deux = new Complexe 2
-cinq = new Complexe 5
-[a,b]=[new Complexe(1),new Complexe(5)]
-until b.moins(a).module()<1e-8
+	<pre class="copier2">deux = nouveau Complexe 2
+cinq = nouveau Complexe 5
+[a,b]=[ nouveau Complexe(1), nouveau Complexe(5)]
+jusqu'à ce que b.moins(a).module() < 1e-8
     a=a.plus(b).sur(deux)
     b=cinq.sur(a)
 affiche a
@@ -1241,20 +1296,19 @@ affiche a
 	<pre class="copier2">
 racineDe = (x) ->
     [a,b]=[1,x]
-    until (abs b-a) < 1e-16
+    jusqu'à ce que (abs b-a) < 1e-16
         a=(a+b)/2
         b=x/a
     a
     
 affiche racineDe 5
-	
-	</pre>
+</pre>
 	<h5>Erreur d'approximation</h5>
 	<p>La différence entre <code>racineDe(x)</code> et la "vraie" racine carrée de x dépend 
 	fortement de x :</p>
 	<pre class="copier2">racineDe = (x) ->
     [a,b]=[1,x]
-    until (abs b-a) < 1e-5
+    jusqu'à ce que (abs b-a) < 1e-5
         a=(a+b)/2
         b=x/a
     a
@@ -1276,11 +1330,11 @@ dessineFonction erreur, 0.1, 20, 0, 1e-5, 'blue'
 	tous ceux qui ne sont pas premiers... Jusqu'à ce qu'il ne reste plus rien à enlever...</p>
 	<p>Cet algorithme se traduit ainsi en CoffeeScript:</p>
 	<pre class="copier2">crible = [2..400]
-for diviseur in [2..20]
-    crible = (x for x in crible when x <= diviseur or x%diviseur isnt 0)
+pour diviseur dans [2..20]
+    crible = (x pour x dans crible quand x <= diviseur ou x%diviseur est différent de 0)
 	</pre>
 	<p>Ensuite, pour savoir si un nombre est premier, on peut faire un test d'appartenance :</p>
-	<pre class="copier1">affiche 127 in crible
+	<pre class="copier1">affiche 127 dans crible
 	</pre>
 	<h3>Exercice</h3>
 	<p>Un cycliste très maladroit tourne autour d'une maison encerclée de fleurs, numérotées 
@@ -1289,8 +1343,8 @@ for diviseur in [2..20]
 	la fleur intacte qui suit. Quel est le numéro de la dernière fleur restante ?</p>
 	<p>On peut résoudre cet exercice avec un crible :</p>
 	<pre class="copier2">fleurs = [1..100]
-until fleurs.length is 1
-    fleurs = (fleurs[n] for n in [0...fleurs.length] when n%2 is 1)
+jusqu'à ce que fleurs.length == 1
+    fleurs = (fleurs[n] pour n dans [0...fleurs.length] quand n%2 est 1)
 affiche fleurs</pre>
 	<h3>Problème de Freudenthal</h3>
 	<h5>Énoncé</h5>
@@ -1311,39 +1365,39 @@ affiche fleurs</pre>
 	de la liste des produits de ses deux termes. Pour cela on construit une fonction 
 	<code>prod</code></p>
 	<pre class="copier1">prod = (n) ->
-    (x*(n-x) for x in [2..n-2]).unique()
+    (x*(n-x) pour x dans [2..n-2]).unique()
 </pre>
 	<h4>Polly</h4>
 	<p>Si Polly, au début, ne peut pas savoir quels sont les nombres, c'est qu'il y a 
 	au moins 2 façons d'obtenir le produit qu'on lui a donné. Pour obtenir la liste des 
 	produits possibles donnés à Polly, on peut donc faire ainsi :</p>
 	<pre class="copier1">produits = []
-for y in [3...100]
-    for x in [2...y]
-        if x+y <= 100
+pour y dans [3...100]
+    pour x dans [2...y]
+        si x+y <= 100
             produits.push x*y
-polly = (p for p in produits when (produits.compteLes p) >= 2)</pre>
+polly = (p pour p dans produits quand (produits.compteLes p) >= 2)</pre>
 	<h4>Sam</h4>
 	<p>Sam ne sachant pas non plus quels sont les nombres, en déduit que sa somme 
 	est celle de nombres qui sont tous dans la liste de Polly. Donc la liste des produits 
 	données à Sam est :</p>
-	<pre class="copier1">sam = (n for n in [5...100] when  (_.intersection prod(n), polly).length is prod(n).length)</pre>
+	<pre class="copier1">sam = (n pour n dans [5...100] quand  (_.intersection prod(n), polly).length est prod(n).length)</pre>
 	<h4>La somme</h4>
 	<p>L'algorithme suivant permet de savoir quelle est la somme donnée à Sam (un seul produit 
 	lui est associé) :</p>
-	<pre class="copier1">produits = _.flatten (prod(s) for s in sam)
+	<pre class="copier1">produits = _.flatten (prod(s) pour s dans sam)
 
-doublons = (p for p in produits when (produits.compteLes p) > 1 )
+doublons = (p pour p dans produits quand (produits.compteLes p) > 1 )
 
-for s in sam
+pour s dans sam
     affiche "La somme #{s} a #{(_.difference prod(s), doublons).length} produits"
 </pre>
 	<p>La variante suivante affecte une variable par cette somme :</p>
-	<pre class="copier1">produits = _.flatten (prod(s) for s in sam)
+	<pre class="copier1">produits = _.flatten (prod(s) pour s dans sam)
 
-doublons = (p for p in produits when (produits.compteLes p) > 1 )
+doublons = (p pour p dans produits quand (produits.compteLes p) > 1 )
 
-polly = (s for s in sam when (_.difference prod(s), doublons).length is 1)
+polly = (s pour s dans sam quand (_.difference prod(s), doublons).length is 1)
 
 somme = polly[0]
 	</pre>
@@ -1354,43 +1408,43 @@ affiche produit
 	</pre>
 	<h4>Conclusion</h4>
 	<p>On peut trouver les deux nombres en bouclant avec un test:</p>
-	<pre class="copier1">solution = new Ensemble
+	<pre class="copier1">solution = nouvel Ensemble
 
-for y in [3...100]
-    for x in [2...y]
-        if x+y is somme and x*y is produit
+pour y dans [3...100]
+    pour x dans [2...y]
+        si x+y est somme et x*y est produit
             solution.ajoute [x,y]
 
 
 affiche solution</pre>
 	<p>En résumé, le script complet qui donne la solution est assez rapide :</p>
 	<pre class="copier2">prod = (n) ->
-    (x*(n-x) for x in [2..n-2]).unique()
+    (x*(n-x) pour x dans [2..n-2]).unique()
 
 produits = []
-for y in [3...100]
-    for x in [2...y]
-        if x+y <= 100
+pour y dans [3...100]
+    pour x dans [2...y]
+        si x+y <= 100
             produits.push x*y
-polly = (p for p in produits when (produits.compteLes p) >= 2)
+polly = (p pour p dans produits quand (produits.compteLes p) >= 2)
 
-sam = (n for n in [5...100] when  (_.intersection prod(n), polly).length is prod(n).length)
+sam = (n pour n dans [5...100] quand (_.intersection prod(n), polly).length est prod(n).length)
 
-produits = _.flatten (prod(s) for s in sam)
+produits = _.flatten (prod(s) pour s dans sam)
 
-doublons = (p for p in produits when (produits.compteLes p) > 1 )
+doublons = (p pour p dans produits when (produits.compteLes p) > 1 )
 
-polly = (s for s in sam when (_.difference prod(s), doublons).length is 1)
+polly = (s pour s dans sam quand (_.difference prod(s), doublons).length is 1)
 
 somme = polly[0]
 
 produit = (_.difference prod(somme), doublons)[0]
 
-solution = new Ensemble
+solution = nouvel Ensemble
 
-for y in [3...100]
-    for x in [2...y]
-        if x+y is somme and x*y is produit
+pour y dans [3...100]
+    pour x dans [2...y]
+        si x+y est somme et x*y est produit
             solution.ajoute [x,y]
 
 
@@ -1406,14 +1460,14 @@ affiche solution</pre>
 arr3 = (x) -> arrondi(1000*x)/1000
 
 affiche "|angle|sinus|"
-affiche "|#{n}    |#{arr3 sinus n} |" for n in [0..90]
+affiche "|#{n}    |#{arr3 sinus n} |" pour n dans [0..90]
 	</pre>
 	<p>à la minute près: </p>
 	<pre class="copier2">
 	arr3 = (x) -> arrondi(1000*x)/1000
 
 affiche "|angle|sinus|"
-affiche "|#{arr3 n}    |#{arr3 sinus n} |" for n in [0..1] by 1/60
+affiche "|#{arr3 n}    |#{arr3 sinus n} |" pour n dans [0..1] by 1/60
 	</pre>
 	<p>Remarque: On peut aussi faire </p>
 	<pre class="copier2">tableauValeurs sinus, [0..20]
@@ -1423,7 +1477,7 @@ affiche "|#{arr3 n}    |#{arr3 sinus n} |" for n in [0..1] by 1/60
 arr3 = (x) -> arrondi(1000*x)/1000
 
 affiche "|angle|cosinus|"
-affiche "|#{n}    |#{arr3 cosinus n} |" for n in [0..90]	
+affiche "|#{n}    |#{arr3 cosinus n} |" pour n dans [0..90]	
 	</pre>
 	
 	
@@ -1437,28 +1491,50 @@ affiche "|#{n}    |#{arr3 cosinus n} |" for n in [0..90]
 f = (x) -> ln(x) - 1
 
 [a,b]=[1,10]
-until b-a < 0.000001
+jusqu'à ce que b-a < 0.000001
     m=(a+b)/2
-    if f(m)<0
-        a=m
-    else
-        b=m
+    si f(m) < 0
+        a = m
+    sinon
+        b = m
     affiche [a,b]
 	</pre>
 	<h4>Équations du second degré</h4>
 	<p>Résoudre une équation, c'est donner la liste de ses solutions; pour le second 
 	degré, il y a 0, 1 ou 2 solutions selon le signe du discriminant &Delta; :</p>
 	<pre class="copier2">SecondDegré = (a,b,c) ->
-    S=new Ensemble []
+    S = nouvel Ensemble []
     Delta = b*b-4*a*c
     r = laRacineDe Delta
-    if r >=0
-        S.ajoute (-b-r)/(2*a)
-        S.ajoute (-b+r)/(2*a)
+    S.ajoute (-b-r)/(2*a)
+    S.ajoute (-b+r)/(2*a)
     S
 
 affiche SecondDegré 1, 2, 1
 	</pre>
+	
+	<p>Et au cas où &Delta; est négatif, on peut résoudre l'équation sur les complexes :
+	<pre class="copier2">SecondDegré = (a,b,c) ->
+    S = nouvel Ensemble []
+    Delta = b*b-4*a*c
+    si Delta >= 0
+        r = laRacineDe Delta
+        S.ajoute (-b-r)/(2*a)
+        S.ajoute (-b+r)/(2*a)
+    sinon
+        r = nouveau Complexe 0, laRacineDe -Delta
+        d = nouveau Complexe 2*a
+        m = nouveau Complexe -b
+        S.ajoute m.moins(r).sur(d)
+        S.ajoute m.plus(r).sur(d)
+    S
+
+affiche SecondDegré 1, -1, 1</pre>
+	</p>
+	
+	
+	
+	
 </div>
 
 
@@ -1473,17 +1549,17 @@ affiche SecondDegré 1, 2, 1
 	<pre class="copier2">
 proba = 1
 nombreDeLancers=1
-until proba < 0.01
+jusqu'à ce que proba < 0.01
     proba *= 5/6
     nombreDeLancers++
-affiche "En lançant #{nombreDeLancers} fois le dé, la probabilité d'avoir un 6 est #{1-proba}"
+affiche "En lançant #{nombreDeLancers} fois le dé, la probabilité d'avoir un 6 vaut #{1-proba}"
 	</pre>
 	<h4>Représentation graphique</h4>
 	<p>On construit une liste (ou tableau) des termes successifs de la suite, pour représenter 
 	graphiquement celle-ci. On remarque comme comme sa raison est inférieure à 1, la valeur 
 	maximale est 1; donc on choisit 0 pour <code>yMin</code> et 1 pour <code>yMax</code> :</p>
 	<pre class="copier2">u=[1]
-for n in [1..20]
+pour n dans [1..20]
     u[n]=5/6*u[n-1]
 
 dessineSuite u, 20, 0, 1, 5, 'red'</pre>
@@ -1497,9 +1573,9 @@ dessineSuite u, 20, 0, 1, 5, 'red'</pre>
 	<p>Algorithme de Briggs pour calculer des logarithmes</p>
 	<pre class="copier2">
 log = (x) ->
-    if x > 0
+    si x > 0
         [r,n]=[x,0]
-        until 0.999999 < r < 1.000001
+        jusqu'à ce que 0.999999 < r < 1.000001
             n++
             r=racine r
         r -= 1
@@ -1514,11 +1590,11 @@ affiche log 2.7182818
 	(la différence entre log(x) et ln(x)) qui dépend de x; sa représentation graphique permet de 
 	voir comment :</p>
 	<pre class="copier2">log = (x) ->
-    if x > 0
-        [r,n]=[x,0]
-        until 0.999999 < r < 1.000001
+    si x > 0
+        [r,n] = [x,0]
+        jusqu'à ce que 0.999999 < r < 1.000001
             n++
-            r=racine r
+            r = racine r
         r -= 1
         r *= 2 for k in [1..n]
         r
@@ -1539,15 +1615,15 @@ dessineFonction erreur, 0.1, 10, 0, 0.000002, 'blue'
 	F<sub>n+2</sub>=F<sub>n+1</sub>+F<sub>n</sub>. Si 
 	F<sub>0</sub>=F<sub>1</sub>=1, la suite est entièrement déterminée.</p>
 	<h4>Version classique</h4>
-	<pre class="copier2">[a,b]=[1,1]
-for n in [1..10]
-    [a,b]=[a+b,a]
+	<pre class="copier2">[a,b] = [1,1]
+pour n dans [1..10]
+    [a,b] = [a+b,a]
     affiche "F(#{n})=#{b}"
 	</pre>
 	<h4>Formule de Binet</h4>
 	<pre class="copier2">
 nombreDor = (1 + racine 5)/2 
-for n in [1..10]
+pour n dans [1..10]
     b = puissance nombreDor, n
     b /= racine 5
     b = arrondi b
@@ -1556,8 +1632,8 @@ for n in [1..10]
     <p>Pour représenter graphiquement la suite de Fibonacci, on met ses termes successifs 
     dans un tableau. Ce qui revient à les pousser l'un après l'autre dedans :</p>
     <pre class="copier2">
-u=[1,1]
-for n in [2..30]
+u = [1,1]
+pour n dans [2..30]
     u[n]=u[n-2]+u[n-1]
 
 dessineSuite u, 10, 0, 100, 5, 'red'
@@ -1581,8 +1657,8 @@ dessineSuite u, 10, 0, 100, 5, 'red'
 	soit 6 manières dans chaque cas.
 	</p>
 	<h4>Simulation</h4>
-	<pre class="copier2">stats = new Sac []
-for n in [1..100000]
+	<pre class="copier2">stats = nouveau Sac []
+pour n dans [1..100000]
     stats.ajoute dé(6)+dé(6)+dé(6)
 trierDansTableau stats.effectifs
 diagrammeBatonsTrie stats.effectifs, 20000
@@ -1592,11 +1668,11 @@ diagrammeBatonsTrie stats.effectifs, 20000
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="100%" height="100%"><line stroke-width="1" stroke="black" y2="440" x2="620" y1="440" x1="20"></line><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="10.3" width="5" y="429.7" x="40"></rect><text fill="black" y="460" x="40">3</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="26.36" width="5" y="413.64" x="77.5"></rect><text fill="black" y="460" x="77.5">4</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="55.4" width="5" y="384.6" x="115"></rect><text fill="black" y="460" x="115">5</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="92.98" width="5" y="347.02" x="152.5"></rect><text fill="black" y="460" x="152.5">6</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="139.76" width="5" y="300.24" x="190"></rect><text fill="black" y="460" x="190">7</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="192.28" width="5" y="247.72" x="227.5"></rect><text fill="black" y="460" x="227.5">8</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="230.54" width="5" y="209.46" x="265"></rect><text fill="black" y="460" x="265">9</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="250.06" width="5" y="189.94" x="302.5"></rect><text fill="black" y="460" x="302.5">10</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="251.74" width="5" y="188.26" x="340"></rect><text fill="black" y="460" x="340">11</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="230.38" width="5" y="209.62" x="377.5"></rect><text fill="black" y="460" x="377.5">12</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="197.54" width="5" y="242.46" x="415"></rect><text fill="black" y="460" x="415">13</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="140.5" width="5" y="299.5" x="452.5"></rect><text fill="black" y="460" x="452.5">14</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="90.2" width="5" y="349.8" x="490"></rect><text fill="black" y="460" x="490">15</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="54.64" width="5" y="385.36" x="527.5"></rect><text fill="black" y="460" x="527.5">16</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="28.48" width="5" y="411.52" x="565"></rect><text fill="black" y="460" x="565">17</text><rect stroke-width="1" stroke="blue" fill-opacity="0.4" fill="blue" height="8.84" width="5" y="431.16" x="602.5"></rect><text fill="black" y="460" x="602.5">18</text></svg>
 </div>
 	<h4>Calcul des probabilités</h4>
-	<pre class="copier2">loi = new Sac []
-loi.ajoute(a+b+c) for a in [1..6] for b in [1..6] for c in [1..6]
+	<pre class="copier2">loi = nouveau Sac []
+loi.ajoute(a+b+c) pour a dans [1..6] pour b dans [1..6] pour c dans [1..6]
 d = puissance 6, 3
-affiche "La probabilité d'avoir un 9 est #{loi.effectifs[9]/d}"
-affiche "La probabilité d'avoir un 10 est #{loi.effectifs[10]/d}"
+affiche "La probabilité d'avoir un 9 vaut #{loi.effectifs[9]/d}"
+affiche "La probabilité d'avoir un 10 vaut #{loi.effectifs[10]/d}"
 	</pre>
 </div>
 
@@ -1606,21 +1682,21 @@ affiche "La probabilité d'avoir un 10 est #{loi.effectifs[10]/d}"
 	lui a posé la question suivante: <q>Comment se fait-il qu'en lançant 
 	4 dés, on a plus d'une chance sur 2 d'avoir au moins un 6 ?</q></p>
 	<h4>Simulation du lancer de 4 dés</h4>
-	<pre class="copier2">gains=0
-for n in [1..100000]
+	<pre class="copier2">gains = 0
+pour n dans [1..100000]
     jeu=(dé(6) for n in [1..4])
-    if (x for x in jeu when x is 6).length
+    si (x pour x dans jeu quand x est 6).length
         gains++
 affiche gains/100000</pre>
 	<h4>Calcul de la probabilité</h4>
 	<pre class="copier2">gains=0
-for a in [1..6]
-    for b in [1..6]
-        for c in [1..6]
-            for d in [1..6]
-                if a is 6 or b is 6 or c is 6 or d is 6
+pour a dans [1..6]
+    pour b dans [1..6]
+        pour c dans [1..6]
+            pour d dans [1..6]
+                si a est 6 ou b est 6 ou c est 6 ou d est 6
                     gains++
-d = puissance 6,4
+d = puissance 6, 4
 affiche gains/d</pre>
 	<h4>Avec une suite géométrique</h4>
 	<p>Comme la probabilité de ne pas avoir de 6 en lançant un dé est 5/6, et par 
@@ -1628,7 +1704,7 @@ affiche gains/d</pre>
 	4 dés est le quatrième terme d'une suite géométrique de premier terme 5/6 et 
 	de raison 5/6:</p>
 	<pre class="copier2">u = 1
-(u *= 5/6 for n in [1..4])
+(u *= 5/6 pour n dans [1..4])
 affiche 1-u</pre>
 
 </div>
