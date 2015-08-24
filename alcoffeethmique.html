@@ -344,6 +344,7 @@ pour n dans [1..8]
 <div class="tabs1">
 <ul id="aides">
 <li><a href="#affectation">Affectation</a></li>
+<li><a href="#fractions">Fractions</a></li>
 <li><a href="#hasard">Simulation</a></li>
 <li><a href="#tests">Tests</a></li>
 <li><a href="#intervalles">Intervalles</a></li>
@@ -400,6 +401,64 @@ x++</pre>
 		</li>
 	</ul>
 	</p>
+</div>
+
+<div id="fractions">
+	<h2>Fractions</h2>
+	<h4>création d'une fraction</h4>
+	<p>Pour créer une fracction, il faut lui attribuer un numérateur et un dénominateur. Par exemple, 
+	pour créer la fraction "2 tiers", on entre
+	<pre class="copier1">nouvelle Fraction 2, 3</pre>
+	L'affectation de fractions est pratique pour effectuer des calculs.
+	</p>
+	<h4>Affichage</h4>
+	<p>Pour afficher une fraction, on met le mot "affiche" devant son nom:
+	<pre class="copier1">a = nouvelle Fraction 2, 3
+affiche a</pre>
+	On peut aussi afficher une valeur approchée de la fraction avec "toFloat()":
+	<pre class="copier1">a = nouvelle Fraction 2, 3
+affiche a.toFloat()</pre>
+	</p>
+	<h4>Opérations</h4>
+	<h5>Addition</h5>
+	<p>Pour additionner deux fractions, on met ".plus" entre les deux:
+	<pre class="copier1">a = nouvelle Fraction 2, 3
+b = nouvelle Fraction 3, 4
+affiche a.plus b</pre>
+	</p>
+	<h5>Soustraction</h5>
+	<p>Pour soustraire deux fractions, on met ".moins" entre les deux:
+	<pre class="copier1">a = nouvelle Fraction 2, 3
+b = nouvelle Fraction 3, 4
+affiche a.moins b</pre>
+	</p>
+	<h5>Multiplication</h5>
+	<p>Pour multiplier deux fractions, on met ".fois" entre les deux:
+	<pre class="copier1">a = nouvelle Fraction 2, 3
+b = nouvelle Fraction 3, 4
+affiche a.fois b</pre>
+	</p>
+	<h5>Division</h5>
+	<p>Pour diviser deux fractions, on met ".sur" entre les deux:
+	<pre class="copier1">a = nouvelle Fraction 2, 3
+b = nouvelle Fraction 3, 4
+affiche a.sur b</pre>
+	</p>
+	<h4>Fonctions</h4>
+	<h5>Opposé</h5>
+	<p>On peut calculer l'opposé d'une fraction (qu'elle soit négative ou positive):
+	<pre class="copier1">a = nouvelle Fraction 2, -3
+affiche a
+affiche a.opposé()</pre>
+	</p>
+	<h5>Inverse</h5>
+	<p>En général, l'inverse d'une fraction n'est pas égal à son opposé:
+	<pre class="copier1">a = nouvelle Fraction 2, -3
+affiche a
+affiche a.inverse()</pre>
+	</p>
+	
+	
 </div>
 
 
@@ -535,15 +594,15 @@ affiche A</pre>
 	d'un élément. On crée un sac à partir d'un tableau, on ajoute un élément dans un sac comme dans 
 	un ensemble, mais on peut aussi ajouter plusieurs fois un élement d'un coup. Ainsi, 
 	pour créer une urne contenant 7 boules rouges et 3 boules bleues, on peut faire, ou bien </p>
-	<pre class="copier1">urne = new Sac ['rouge','rouge','rouge','rouge','rouge','rouge','rouge','bleu','bleu','bleu']
+	<pre class="copier1">urne = nouveau Sac ['rouge','rouge','rouge','rouge','rouge','rouge','rouge','bleu','bleu','bleu']
 </pre>
 	<p>ou bien</p>
-	<pre class="copier1">urne = new Sac []
-urne.ajoute 'rouge' for n in [1..7]
-urne.ajoute 'bleu' for n in [1..3]
+	<pre class="copier1">urne = nouveau Sac []
+urne.ajoute 'rouge' pour n dans [1..7]
+urne.ajoute 'bleu' pour n dans [1..3]
 </pre>
 	<p>ou enfin</p>
-	<pre class="copier1">urne = new Sac []
+	<pre class="copier1">urne = nouveau Sac []
 urne.ajouteFois 7, 'rouge'
 urne.ajouteFois 3, 'bleu'
 </pre>
@@ -642,12 +701,12 @@ destiné à calculer la fonction par algorithme.</p>
     peut afficher ce tableau associatif dans le tableau ci-dessus ("sorties graphiques")</p>
     <pre class="copier1">
 tableauAssoc = {}
-for x in [1,2,3,5,10]
+pour x dans [1,2,3,5,10]
     tableauAssoc[x] = leCarréDe x
 trierDansTableau tableauAssoc
     </pre>
     <p>Plus court: On peut afficher les x et leurs images dans l'affichage:</p>
-    <pre class="copier1">for x in [1,2,3,5,10]
+    <pre class="copier1">pour x dans [1,2,3,5,10]
     affiche "#{x},   #{leCarréDe x}"
     </pre>
     <p>Ensuite, on sélectionne à la souris les nombres, et on les copie-colle dans un fichier 
@@ -662,40 +721,43 @@ trierDansTableau tableauAssoc
 	<p>Pour répéter 10 fois une action, on a besoin d'une variable appelée
 	indice de la boucle. Ici on notera i cet indice, qui ira de 1 à 10.</p>
 	<p>Par exemple, pour lancer un dé 10 fois, on peut entrer</p>
-	<pre class="copier1">for i in [1..10]
+	<pre class="copier1">pour i dans [1..10]
     affiche dé 6</pre>
     <p>Un bon moyen de suivre l'indice d'une boucle est d'afficher
 	celui-ci dans la boucle:</p>
-	<pre class="copier1">for in in [1..10]
+	<pre class="copier1">pour i dans [1..10]
     affiche i</pre>
     <h5>Remarque:</h5>
-    <pre class="copier1">affiche i for i in [1..10]</pre>
-    <p>a le même effet...</p>
+    <pre class="copier1">affiche i pour i dans [1..10]</pre>
+    <p>a le même effet: Afficher i pour i entre 1 et 10. Alors que si on ajoute des parenthèses, il 
+    n'y a plus qu'un affichage, les parenthèses produisant une liste:
+    <pre class="copier1">affiche (i pour i dans [1..10])</pre>
+    </p>
     <p>Les nombres 1, 2, 3 etc parcourus forment une <em>suite arithmétique</em>
      de raison 1.</p>
     <h4>Autres suites arithmétiques</h4>
     <p>Pour faire descendre l'indice (compte à rebours) on peut faire</p>
-    <pre class="copier1">affiche i for i in [10..1]</pre>
+    <pre class="copier1">affiche i pour i dans [10..1]</pre>
     <p>Pour aller de 3 en 3 on peut faire</p>
-    <pre class="copier1">affiche i for i in [1..10] when i%3 is 1</pre>
+    <pre class="copier1">affiche i pour i dans [1..10] quand i%3 est 1</pre>
     <p>ou, mieux:</p>
-    <pre class="copier1">affiche i for i in [1..10] by 3</pre>
+    <pre class="copier1">affiche i pour i dans [1..10] by 3</pre>
     <h4>Boucler sur les nombres premiers</h4>
     <p>Pour boucler sur les nombres premiers inférieurs à 20:</p>
-    <pre class="copier1">for i in [2,3,5,7,11,13]</pre>
+    <pre class="copier1">pour i dans [2,3,5,7,11,13]</pre>
 	<h3>Boucler jusqu'à une condition</h3>
 	<p>Pour lancer un dé jusqu'à ce qu'on ait un 6 (et compter les
 	lancers dans un indice i), on fait</p>
 	<h4>Jusque</h4>
 	<pre class="copier1">i=0
-i++ until dé(6) is 6</pre>
+i++ jusqu'à ce que dé(6) == 6</pre>
 	<p>Il y a plusieurs manières de faire ça; par exemple</p>
 	<pre class="copier1">i=1
-i++ while dé(6) isnt 6</pre>
+i++ tant que dé(6) != 6</pre>
 	<h4>Tant que</h4>
 	<p>On peut aussi faire comme ceci:</p>
 	<pre class="copier1">i=1
-while dé(6) isnt 6
+tant que dé(6) != 6
     i=i+1</pre>
 </div>
 
@@ -704,18 +766,18 @@ while dé(6) isnt 6
 	<p>Un dé icosaédrique, comme son nom l'indique, a 20 faces numérotées de 1 à 20. 
 	L'univers de probabilité est alors &Omega;={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}; 
 	On peut le calculer en fabricant un ensemble à partir de la liste des nombres allant de 1 à 20 :</p>
-	<pre class="copier1">univers = new Ensemble [1..20]
+	<pre class="copier1">univers = nouveau Ensemble [1..20]
 
 affiche univers
 	</pre>
 	<h4>Évènements</h4>
 	<p>L'évènement «le résultat est pair» s'écrit A={2,4,6,8,10,12,14,16,18,20}; il peut 
 	se définir en compréhension par</p>
-	<pre class="copier1">A = new Ensemble (x for x in univers.support when x%2 is 0)
+	<pre class="copier1">A = nouveau Ensemble (x pour x dans univers.support quand x%2 == 0)
 	</pre>
 	<p>L'évènement «le résultat s'écrit avec un seul chiffre» peut se définir de façon analogue 
 	mais aussi en faisant comme pour l'univers; on obtient B={1,2,3,4,5,6,7,8,9}</p>
-	<pre class="copier1">B = new Ensemble [1..9]
+	<pre class="copier1">B = nouveau Ensemble [1..9]
 	</pre>
 	<h4>Intersection, réunion, contraire</h4>
 	<p>Le contraire de A est formé des résultats qui sont dans l'univers mais pas dans A; on l'obtient par </p>
@@ -728,9 +790,9 @@ affiche univers
 	<pre class="copier1">A.union B</pre>
 	<h4>Crible d'Eratosthène</h4>
 	<p>Pour chercher les nombres premiers inférieurs ou égaux à 200, on peut faire ainsi :</p>
-	<pre class="copier1">crible = new Ensemble [1..200]
-for m in [2..200]
-    poubelle = new Ensemble (x for x in crible.support when x>m and x%m is 0)
+	<pre class="copier1">crible = nouveau Ensemble [1..200]
+pour m dans [2..200]
+    poubelle = nouveau Ensemble (x pour x dans crible.support quand x>m et x%m est 0)
     crible = poubelle.complémentDans crible
 
 affiche crible
@@ -739,9 +801,9 @@ affiche crible
 	d'afficher l'histogramme des nombres premiers :</p>
 	<pre class="copier1">N = 200
 crible = [2..N]
-for m in [2..N]
-    poubelle = (x for x in crible when x>m and x%m is 0)
-    crible = (x for x in crible when x not in poubelle)
+pour m dans [2..N]
+    poubelle = (x pour x dans crible quand x>m et x%m est 0)
+    crible = (x pour x dans crible quand x not dans poubelle)
 
 histogramme crible, 0, 200, 10, 10
 </pre>
@@ -759,9 +821,9 @@ histogramme crible, 0, 200, 10, 10
 	<p>La <em>probabilité</em> d'un évènement A est définie comme le quotient de son cardinal 
 	par celui de l'univers; elle dépend donc du choix de l'univers, et se note P<sub>&Omega;</sub>(A), ou, 
 	lorsqu'il n'y a pas d'ambigüité sur &Omega;, simplement P(A): </p>
-	<pre class="copier1">univers = new Ensemble [1..20]
+	<pre class="copier1">univers = nouveau Ensemble [1..20]
 proba = (E) -> E.probaSachantQue univers
-B = new Ensemble [1..9]
+B = nouveau Ensemble [1..9]
 affiche proba(B)
 </pre>
 </div>
