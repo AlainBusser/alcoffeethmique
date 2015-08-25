@@ -129,13 +129,16 @@ var arrondiSup=function(x){
 var  traduction = function(dutexte) {
     var texte;
     texte = dutexte;
+    texte = texte.replace(/\ n\'est\ pas\ dans\ /g, " not in ");
     texte = texte.replace(/\ dans\ /g, " in ");
     texte = texte.replace(/\ et\ /g, " and ");
     texte = texte.replace(/\ ou\ /g, " or ");
     texte = texte.replace(/\ par\ pas\ de\ /g, " by ");
     texte = texte.replace(/\ est\ différent\ de\ /g, " isnt ");
+    texte = texte.replace(/\ n\'est\ pas\ égal\ à\ /g, " isnt ");
     texte = texte.replace(/\ n\'est\ pas\ /g, " isnt ");
-    texte = texte.replace(/\ est\ /g, " is ");
+    texte = texte.replace(/à\ moins\ que\ /g, "unless ");
+    texte = texte.replace(/\ est\ égal\ à\ /g, " is ");
     texte = texte.replace(/selon\ /g, "switch ");
     texte = texte.replace(/pour\ /g, "for ");
     texte = texte.replace(/Pour\ /g, "for ");
