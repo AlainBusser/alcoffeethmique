@@ -402,7 +402,7 @@ trierDansTableau = function(dico) {
     }
     return _results;
   })()).sort(function(x, y) {
-    return y < x;
+    return x-y;
   });
   _results = [];
   for (_i = 0, _len = dicotrie.length; _i < _len; _i++) {

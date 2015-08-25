@@ -211,7 +211,7 @@ trierDansTableau = (dico) ->
     $("#teffectifs").remove()
     $("#tabsortie").append '<tr id="tvaleurs"></tr>'
     $("#tabsortie").append '<tr id="teffectifs"></tr>'
-    dicotrie=(parseFloat x for x of dico).sort (x,y)->(y<x)
+    dicotrie=(parseFloat x for x of dico).sort (x,y)-> (x-y)
     for x in dicotrie
         $("#tvaleurs").append '<th>'+x+'</th>'
         $("#teffectifs").append '<td>'+dico[x]+'</td>'
