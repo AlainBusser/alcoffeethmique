@@ -27,3 +27,14 @@ En vertu de
 * l'export graphique au format svg,
 
 il est possible de rédiger, à l'aide de Libre Office Writer, le rapport de TP, pendant le TP.
+
+
+
+Pour connaître la liste des fonctions d'alcoffeethmique, faire
+
+	affiche (f for f of this)
+	
+
+Et pour rigoler, faire
+
+	affiche affiche
