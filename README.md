@@ -1,14 +1,14 @@
-# alcoffeethmique
+# [alcoffeethmique](https://alainbusser.github.io/alcoffeethmique/alcoffeethmique.html)
 
 
 
 Logiciel d'algorithmique en CoffeeScript francisé.
 
 
-Pour programmer, [cliquer ici](https://alainbusser.github.io/alcoffeethmique/alcoffeethmique.html)
+Pour commencer à programmer, [cliquer ici](https://alainbusser.github.io/alcoffeethmique/alcoffeethmique.html)
 
 
-En bonus, [un petit utilitaire sur les fonctions](
+En bonus, [un petit utilitaire sur les fonctions](https://alainbusser.github.io/alcoffeethmique/fonctionsCoffee.html)
 
 
 La programmation est simple parce que c'est du CoffeeScript.
