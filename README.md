@@ -4,6 +4,13 @@
 
 Logiciel d'algorithmique en CoffeeScript francisé.
 
+
+Pour programmer, [cliquer ici](https://alainbusser.github.io/alcoffeethmique/alcoffeethmique.html)
+
+
+En bonus, [un petit utilitaire sur les fonctions](
+
+
 La programmation est simple parce que c'est du CoffeeScript.
 
 De nombreux exemples sont fournis avec, ils couvrent le programme de maths de la 2nde jusqu'au bac.
@@ -29,6 +36,12 @@ En vertu de
 il est possible de rédiger, à l'aide de Libre Office Writer, le rapport de TP, pendant le TP.
 
 
+La géométrie se fait à l'aide de sylvester.js. Pour la syntaxe:
+
+* [les points et vecteurs](https://alainbusser.github.io/alcoffeethmique/Vector.html)
+* [les droites](https://alainbusser.github.io/alcoffeethmique/Lines.html)
+* [les plans](https://alainbusser.github.io/alcoffeethmique/Planes.html)
+* [les matrices](https://alainbusser.github.io/alcoffeethmique/Matrix.html)
 
 Pour connaître la liste des fonctions d'alcoffeethmique, faire
 

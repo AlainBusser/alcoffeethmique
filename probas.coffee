@@ -180,7 +180,7 @@ class Sac
         _liste = []
         for x of @effectifs
             _liste.push x for n in [1..@effectifs[x]]
-        _liste[dé _liste.length-1]
+        _liste[dé(_liste.length)-1]
     inter: (bag) ->
         _me = new Sac []
         for x of @effectifs
