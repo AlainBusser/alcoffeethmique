@@ -382,9 +382,6 @@ mettreDansTableau = function(dico) {
   $("#tabsortie").append('<tr id="teffectifs"></tr>');
   results = [];
   for (x in dico) {
-    if (!(x < 2e308)) {
-      continue;
-    }
     $("#tvaleurs").append('<th>' + x + '</th>');
     results.push($("#teffectifs").append('<td>' + dico[x] + '</td>'));
   }

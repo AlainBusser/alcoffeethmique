@@ -202,7 +202,7 @@ mettreDansTableau = (dico) ->
     $("#tabsortie").append '<tr id="tvaleurs"></tr>'
     $("#tabsortie").append '<tr id="teffectifs"></tr>'
 
-    for x of dico when x<Infinity
+    for x of dico #when x<Infinity
         $("#tvaleurs").append '<th>'+x+'</th>'
         $("#teffectifs").append '<td>'+dico[x]+'</td>'
         

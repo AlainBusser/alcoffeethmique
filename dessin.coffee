@@ -1,9 +1,31 @@
 SVG = (tag) ->
     document.createElementNS('http://www.w3.org/2000/svg', tag)
+
+reflets = """
+	<defs id="SVGdefs">
+	<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+	<stop offset="0%" stop-color="gray" />
+	<stop offset="80%" stop-color="black" />
+	</linearGradient>
+	<marker id="pointe" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+	<path d="M 0 0 L 10 5 L 0 10 z" fill="url(#metal)" />
+	</marker>
+	<radialGradient id="coque"  cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
+	<stop offset="0%" stop-color="white" />
+	<stop offset="80%" stop-color="brown" />
+	<stop offset="100%" stop-color="black" />
+	</radialGradient>
+	<radialGradient id="bille" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
+	<stop offset="0%" stop-color="white" />
+	<stop offset="75%" stop-color="blue" />
+	<stop offset="100%" stop-color="black" />
+	</radialGradient>
+	</defs>
+	"""
     
 effaceDessin = () ->
     dessin = $("#leSVG")
-    dessin.empty()
+    dessin.empty().prepend(reflets)
 
 dessineSegment = (x1=0,y1=0,x2=1,y2=1,couleur='black') ->
     dessin = $("#leSVG")
@@ -40,6 +62,28 @@ dessineCercle = (cx=0,cy=0,r=5,couleur='red') ->
         .attr('stroke',couleur)
         .attr('stroke-width',1)
         .appendTo(dessin)
+
+dessinePoint = (cx=0, cy=0, r=4) ->
+	dessin = $("#leSVG")
+	$(SVG('circle'))
+		.attr('cx',cx)
+		.attr('cy',cy)
+		.attr('r',r)
+		.attr('fill','url(#bille)')
+		.appendTo dessin
+
+dessineEllipse = (cx=100, cy=200, rx=100, ry=200, couleur="brown") ->
+	dessin = $("#leSVG")
+	$(SVG('ellipse'))
+		.attr('cx',cx)
+		.attr('cy',cy)
+		.attr('rx',rx)
+		.attr('ry',ry)
+		.attr('stroke',couleur)
+		.attr('fill',couleur)
+		.attr('fill-opacity',0.4)
+		.attr('stroke-width',1)
+		.appendTo dessin
 
 dessinePolygone = (liste=[[0,0], [300,100],[100,300]], couleur='green', rempli=none) ->
     dessin = $("#leSVG")
@@ -196,6 +240,23 @@ dessineSuite = (suite=[1..20], N=20, yMin=-1, yMax=1, rayon=5, couleur='red') ->
     $("#sortieSVG").text $("#graphique").html()
     
 
+dessineSuite3D = (suite=[1..20], N=20, yMin=-1, yMax=1, rayon=5, couleur='red') ->
+    effaceDessin()
+    dessineAxes 0, N, yMin, yMax, 'black'
+    odgX = 1 - arrondi ln(N)/Math.LN10
+    odgY = 2 - arrondi ln(yMax-yMin)/Math.LN10
+    xGrad = 0
+    yGrad = arrInfOdg yMin, odgY
+    echX = 500/arrSupOdg(N,odgX)
+    echY = 400/(arrSupOdg(yMax,odgY)-arrInfOdg(yMin,odgY))
+    [abscisse,ordonnee] = [40,440]
+    while xGrad <= arrSupOdg N, odgX
+        dessinePoint abscisse, 440+echY*yGrad-echY*suite[xGrad], rayon
+        xGrad++
+        abscisse += echX
+    $("#sortieSVG").text $("#graphique").html()
+    
+
 dessineVoronoi = (listePoints, couleurTraits = 'darkBlue', rayon = 3, couleurPoints = 'darkRed', dessinerPoints = true) ->
     effaceDessin()
     sites = []
@@ -209,3 +270,131 @@ dessineVoronoi = (listePoints, couleurTraits = 'darkBlue', rayon = 3, couleurPoi
     for arete in resultV.edges
         dessineSegment arete.va.x, arete.va.y, arete.vb.x, arete.vb.y, couleurTraits    
     $("#sortieSVG").text $("#graphique").html()
+
+
+
+patate = (S,Cx=320,couleur='brown') ->
+    Dy = 320/S.cardinal()
+    Rx = _.max (x.toString().length for x in S.support)
+    Rx *= 40
+    Hy = 80
+    for elt in S.support
+        dessineCercle Cx-Rx/4, Hy, 4, couleur
+        dessineTexte elt, Cx, Hy, couleur
+        Hy += Dy
+    dessineEllipse Cx, 240, Rx, 200, couleur
+
+
+patates = (S1,S2,Cx=320,c1='blue',c2='red') ->
+    S12 = S1.inter S2
+    Sc1 = S2.complémentDans S1
+    Sc2 = S1.complémentDans S2
+    Dy = 320/_.max([Sc1.cardinal(),Sc2.cardinal(),S12.cardinal()])
+    Rx1 = _.max (x.toString().length for x in S1.support)
+    Rx2 = _.max (x.toString().length for x in S2.support)
+    Rx = _.max [Rx1,Rx2]
+    Rx *= 40
+    Hy = 80
+    for elt in Sc1.support
+        dessineCercle Cx-2*Rx, Hy, 4, c1
+        dessineTexte elt, Cx-1.8*Rx, Hy, c1
+        Hy += Dy
+    Hy = 80
+    for elt in Sc2.support
+        dessineCercle Cx+2*Rx, Hy, 4, c2
+        dessineTexte elt, Cx+2.2*Rx, Hy, c2
+        Hy += Dy
+    Hy = 120
+    for elt in S12.support
+        dessineCercle Cx, Hy, 4, 'black'
+        dessineTexte elt, Cx+0.2*Rx, Hy, 'black'
+        Hy += Dy
+    dessineEllipse Cx-1.5*Rx, 240, 2.5*Rx, 200, c1
+    dessineEllipse Cx+1.5*Rx, 240, 2.5*Rx, 200, c2
+
+ellipse = (cx=100, cy=200, rx=100, ry=200, couleur="brown", alpha=0.3) ->
+	dessin = $("#leSVG")
+	$(SVG('ellipse'))
+		.attr('cx',cx)
+		.attr('cy',cy)
+		.attr('rx',rx)
+		.attr('ry',ry)
+		.attr('stroke',couleur)
+		.attr('fill','url(#coque)')
+		.attr('fill-opacity',alpha)
+		.attr('stroke-width',1)
+		.appendTo dessin
+
+
+
+patate3D = (S,Cx=320,couleur='brown',alpha=0.3) ->
+    Dy = 320/S.cardinal()
+    Rx = _.max (x.toString().length for x in S.support)
+    Rx *= 40
+    Hy = 80
+    for elt in S.support
+        dessinePoint Cx-Rx/4, Hy, 4
+        dessineTexte elt, Cx, Hy, couleur
+        Hy += Dy
+    ellipse Cx, 240, Rx, 200, couleur, alpha
+
+
+patates3D = (S1,S2,Cx=320) ->
+    S12 = S1.inter S2
+    Sc1 = S2.complémentDans S1
+    Sc2 = S1.complémentDans S2
+    Dy = 320/_.max([Sc1.cardinal(),Sc2.cardinal(),S12.cardinal()])
+    Rx1 = _.max (x.toString().length for x in S1.support)
+    Rx2 = _.max (x.toString().length for x in S2.support)
+    Rx = _.max [Rx1,Rx2]
+    Rx *= 40
+    Hy = 80
+    for elt in Sc1.support
+        dessinePoint Cx-2*Rx, Hy, 4
+        dessineTexte elt, Cx-1.8*Rx, Hy
+        Hy += Dy
+    Hy = 80
+    for elt in Sc2.support
+        dessinePoint Cx+2*Rx, Hy, 4
+        dessineTexte elt, Cx+2.2*Rx, Hy
+        Hy += Dy
+    Hy = 120
+    for elt in S12.support
+        dessinePoint Cx, Hy, 4
+        dessineTexte elt, Cx+0.2*Rx, Hy
+        Hy += Dy
+    ellipse Cx-1.5*Rx, 240, 2.5*Rx, 200, "blue"
+    ellipse Cx+1.5*Rx, 240, 2.5*Rx, 200, "red"
+
+flèche = (x1,y1,x2,y2,grosseur=2,couleur="black") ->
+    dessin = $("#leSVG")
+    $(SVG('line'))
+        .attr('x1',x1)
+        .attr('y1',y1)
+        .attr('x2',x2)
+        .attr('y2',y2)
+        .attr('stroke',couleur)
+        .attr('stroke-width',grosseur)
+        .attr('marker-end','url(#pointe)')
+        .appendTo dessin
+
+
+patate2 = (cv,Cx=320,couleur='brown') ->
+    Dy = 320/cv.length
+    Hy = 80
+    for elt in cv
+        dessinePoint Cx-32, Hy, 4
+        dessineTexte elt, Cx-24, Hy, couleur
+        Hy += Dy
+    ellipse Cx, 240, 80, 200, couleur
+
+sagittal = (obj) ->
+    depart = Object.keys obj
+    arrivee = (obj[e] for e in depart)
+    Dy = 320/arrivee.length
+    Hy = 80
+    for elt in depart
+        flèche 92, Hy, 472, Hy
+        Hy += Dy
+    patate2 depart, 120, 'blue'
+    patate2 arrivee, 520, 'red'
