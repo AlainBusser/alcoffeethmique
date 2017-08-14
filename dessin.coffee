@@ -272,12 +272,26 @@ dessineVoronoi = (listePoints, couleurTraits = 'darkBlue', rayon = 3, couleurPoi
     $("#sortieSVG").text $("#graphique").html()
 
 
+dessineVoronoi3D = (listePoints, couleurTraits = 'darkBlue', rayon = 3, dessinerPoints = true) ->
+    sites = []
+    for point in listePoints
+        if dessinerPoints
+            dessinePoint point[0], point[1], rayon
+        sites.push {x: point[0], y: point[1]}
+    bbox = {xl:0, xr:640, yt:0, yb:480}
+    voronoi = new Voronoi()
+    resultV = voronoi.compute sites, bbox
+    for arete in resultV.edges
+        dessineSegment arete.va.x, arete.va.y, arete.vb.x, arete.vb.y, couleurTraits    
+    $("#sortieSVG").text $("#graphique").html()
+
+
 
 patate = (S,Cx=320,couleur='brown') ->
     Dy = 320/S.cardinal()
     Rx = _.max (x.toString().length for x in S.support)
     Rx *= 40
-    Hy = 80
+    Hy = 80+Dy/2
     for elt in S.support
         dessineCercle Cx-Rx/4, Hy, 4, couleur
         dessineTexte elt, Cx, Hy, couleur
@@ -294,17 +308,17 @@ patates = (S1,S2,Cx=320,c1='blue',c2='red') ->
     Rx2 = _.max (x.toString().length for x in S2.support)
     Rx = _.max [Rx1,Rx2]
     Rx *= 40
-    Hy = 80
+    Hy = 80+Dy/2
     for elt in Sc1.support
         dessineCercle Cx-2*Rx, Hy, 4, c1
         dessineTexte elt, Cx-1.8*Rx, Hy, c1
         Hy += Dy
-    Hy = 80
+    Hy = 80+Dy/2
     for elt in Sc2.support
         dessineCercle Cx+2*Rx, Hy, 4, c2
         dessineTexte elt, Cx+2.2*Rx, Hy, c2
         Hy += Dy
-    Hy = 120
+    Hy = 120+Dy/2
     for elt in S12.support
         dessineCercle Cx, Hy, 4, 'black'
         dessineTexte elt, Cx+0.2*Rx, Hy, 'black'
@@ -331,7 +345,7 @@ patate3D = (S,Cx=320,couleur='brown',alpha=0.3) ->
     Dy = 320/S.cardinal()
     Rx = _.max (x.toString().length for x in S.support)
     Rx *= 40
-    Hy = 80
+    Hy = 80+Dy/2
     for elt in S.support
         dessinePoint Cx-Rx/4, Hy, 4
         dessineTexte elt, Cx, Hy, couleur
@@ -348,17 +362,17 @@ patates3D = (S1,S2,Cx=320) ->
     Rx2 = _.max (x.toString().length for x in S2.support)
     Rx = _.max [Rx1,Rx2]
     Rx *= 40
-    Hy = 80
+    Hy = 80+Dy/2
     for elt in Sc1.support
         dessinePoint Cx-2*Rx, Hy, 4
         dessineTexte elt, Cx-1.8*Rx, Hy
         Hy += Dy
-    Hy = 80
+    Hy = 80+Dy/2
     for elt in Sc2.support
         dessinePoint Cx+2*Rx, Hy, 4
         dessineTexte elt, Cx+2.2*Rx, Hy
         Hy += Dy
-    Hy = 120
+    Hy = 120+Dy/2
     for elt in S12.support
         dessinePoint Cx, Hy, 4
         dessineTexte elt, Cx+0.2*Rx, Hy
@@ -381,7 +395,7 @@ flèche = (x1,y1,x2,y2,grosseur=2,couleur="black") ->
 
 patate2 = (cv,Cx=320,couleur='brown') ->
     Dy = 320/cv.length
-    Hy = 80
+    Hy = 80+Dy/2
     for elt in cv
         dessinePoint Cx-32, Hy, 4
         dessineTexte elt, Cx-24, Hy, couleur
@@ -392,7 +406,7 @@ sagittal = (obj) ->
     depart = Object.keys obj
     arrivee = (obj[e] for e in depart)
     Dy = 320/arrivee.length
-    Hy = 80
+    Hy = 80+Dy/2
     for elt in depart
         flèche 92, Hy, 472, Hy
         Hy += Dy
