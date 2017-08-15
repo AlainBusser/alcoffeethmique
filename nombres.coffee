@@ -193,3 +193,107 @@ entexte = (n) ->
               n = quotronc(n,1000)
               indice += 1
             texte
+
+
+Znot = {
+	".inter ": "∩",
+	".intersectionWith ": "∩",
+	".union ": "∪",
+	" not in ": "∉",
+	" in ": "∈",
+	"racine": "√",
+	"Math.sqrt": "√",
+	"laRacineDe": "√",
+	"Infinity": "∞",
+	"=": "←",
+	"!←": "≠",
+	"←←": "=",
+	"<←": "≤",
+	">←": "≥",
+	"/←": " est divisé par ",
+	"\\*←": " est multiplié par ",
+	"-←": " est diminué de ",
+	"\\+←": " est augmenté de ",
+	"\\+\\+": " est incrémenté",
+	"--": "est décrémenté",
+	" dans ": "∈",
+	".estVide\\(\\)": "=∅",
+	".contains": " ∋ ",
+	".isPerpendicularTo": " ⟂",
+	".isParallelTo": " ∥ ",
+	".subtract": " -",
+	".every": "∀",
+	".some": "∃",
+	".complémentDans": " ∖",
+	"->": "↦",
+	".push": " ⇦",
+	".empile": " ⇦",
+	".pop\\(\\)": " ⇨",
+	".ajoute": " ⇦",
+	"laSommeDe": "∑",
+	".dot": ".",
+	".angleFrom": "∠",
+	".multiply": "×",
+	".add": "+",
+	".subtract": "-",
+	"lEcartTypeDe": "σ",
+	"Math.E": "ℯ",
+	"for ": "pour ",
+	"until ": "jusqu\'à ce que ",
+	"while ": "tant que ",
+	"if ": "si ",
+	"else": "sinon"
+}
+
+
+toMath = (cs) ->
+    _.each Znot, (value,key)->
+        re = new RegExp key, 'g'
+        cs = cs.replace re, value
+    cs
+
+truchetrond = (binaire) ->
+    t = binaire.replace /0/g, "╮╰"
+    t = t.replace /1/g, "╯╭"
+    t
+
+truchet = (binaire) ->
+    t = binaire.replace /0/g, "╲"
+    t = t.replace /1/g, "╱"
+    t
+
+truchetortho = (binaire) ->
+    t = binaire.replace /0/g, "━"
+    t = t.replace /1/g, "┃"
+    t
+
+truchetgrille = (binaire) ->
+    t = binaire.replace /0/g, "╪"
+    t = t.replace /1/g, "╫"
+    t
+
+truchetgrille2 = (binaire) ->
+    t = binaire.replace /0/g, "┿"
+    t = t.replace /1/g, "╂"
+    t
+
+truchetpixels = (binaire) ->
+    t = binaire.replace /0/g, "▚"
+    t = t.replace /1/g, "▞"
+    t
+
+
+
+bincross = (binaire) ->
+    t = binaire.replace /0/g, "☐"
+#    t = t.replace /1/g, "☑"
+    t = t.replace /1/g, "☒"
+    t
+
+
+
+binpixels = (binaire) ->
+    t = binaire.replace /0/g, "⬜"
+    t = t.replace /1/g, "⬛"
+    t
+

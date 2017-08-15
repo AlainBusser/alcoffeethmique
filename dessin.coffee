@@ -412,3 +412,60 @@ sagittal = (obj) ->
         Hy += Dy
     patate2 depart, 120, 'blue'
     patate2 arrivee, 520, 'red'
+
+
+
+Tgauche = (x=0,y=0,r=20,couleur='blue') ->
+    dessin = $("#leSVG")
+    $(SVG('path'))
+        .attr('d',"M #{x} #{y} m 0 #{r} a #{r} #{r} 0 0 0 #{r} #{-r}")
+        .attr('stroke',couleur)
+        .attr('fill','none')
+        .attr('stroke-width',1)
+        .appendTo(dessin)
+    $(SVG('path'))
+        .attr('d',"M #{x} #{y} m #{2*r} #{r} a #{r} #{r} 0 0 0 #{-r} #{r}")
+        .attr('stroke',couleur)
+        .attr('fill','none')
+        .attr('stroke-width',1)
+        .appendTo(dessin)
+
+Tdroite = (x=0,y=0,r=20,couleur='blue') ->
+    dessin = $("#leSVG")
+    $(SVG('path'))
+        .attr('d',"M #{x} #{y} m #{r} 0 a #{r} #{r} 0 0 0 #{r} #{r}")
+        .attr('stroke',couleur)
+        .attr('fill','none')
+        .attr('stroke-width',1)
+        .appendTo(dessin)
+    $(SVG('path'))
+        .attr('d',"M #{x} #{y} m #{r} #{2*r} a #{r} #{r} 0 0 0 #{-r} #{-r}")
+        .attr('stroke',couleur)
+        .attr('fill','none')
+        .attr('stroke-width',1)
+        .appendTo(dessin)
+
+ligneTruchet = (binaire, x=0,y=0,r=20,couleur='blue') ->
+	for rang in [0..binaire.length]
+	    if binaire[rang] == "1"
+	        Tgauche x+r*rang,y,r/2,couleur
+	    else
+	        Tdroite x+r*rang,y,r/2,couleur
+
+
+Tgc = (x=0,y=0,r=20,cH='red',cV='red') ->
+    dessineSegment x, y+r/2, x+r/2-3, y+r/2, cH 
+    dessineSegment x+r/2+3, y+r/2, x+r, y+r/2, cH 
+    dessineSegment x+r/2, y, x+r/2, y+r, cV
+
+Tdc = (x=0,y=0,r=20,cH='red',cV='red') ->
+    dessineSegment x+r/2, y, x+r/2, y+r/2-3, cV 
+    dessineSegment x+r/2, y+r/2+3, x+r/2, y+r, cV 
+    dessineSegment x, y+r/2, x+r, y+r/2, cH
+
+croixTruchet = (binaire, x=0,y=0,r=20,cH='red',cV='red') ->
+	for rang in [0..binaire.length]
+	    if binaire[rang] == "1"
+	        Tgc x+r*rang,y,r,cH,cV
+	    else
+	        Tdc x+r*rang,y,r,cH,cV
