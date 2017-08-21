@@ -2,7 +2,7 @@ SVG = (tag) ->
     document.createElementNS('http://www.w3.org/2000/svg', tag)
 
 reflets = """
-	<defs id="SVGdefs">
+	<defs>
 	<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
 	<stop offset="0%" stop-color="gray" />
 	<stop offset="80%" stop-color="black" />
@@ -469,3 +469,76 @@ croixTruchet = (binaire, x=0,y=0,r=20,cH='red',cV='red') ->
 	        Tgc x+r*rang,y,r,cH,cV
 	    else
 	        Tdc x+r*rang,y,r,cH,cV
+
+L1pair = (x=0,y=0,r=20,couleur='blue') ->
+    dessin = $("#leSVG")
+    $(SVG('path'))
+        .attr('d',"M #{x} #{y} m 0 #{r} a #{r} #{r} 0 0 0 #{r} #{-r} h #{-r} z")
+        .attr('stroke',couleur)
+        .attr('fill',couleur)
+        .attr('stroke-width',1)
+        .appendTo(dessin)
+    $(SVG('path'))
+        .attr('d',"M #{x} #{y} m #{2*r} #{r} a #{r} #{r} 0 0 0 #{-r} #{r} h #{r} z")
+        .attr('stroke',couleur)
+        .attr('fill',couleur)
+        .attr('stroke-width',1)
+        .appendTo(dessin)
+
+L1impair = (x=0,y=0,r=20,couleur='blue') ->
+    dessin = $("#leSVG")
+    $(SVG('path'))
+        .attr('d',"M #{x} #{y} m 0 #{r} a #{r} #{r} 0 0 0 #{r} #{-r} h #{r} v #{r} a #{r} #{r} 0 0 0 #{-r} #{r} h #{-r} z")
+        .attr('stroke',couleur)
+        .attr('fill',couleur)
+        .attr('stroke-width',1)
+        .appendTo(dessin)
+
+L0pair = (x=0,y=0,r=20,couleur='blue') ->
+    dessin = $("#leSVG")
+    $(SVG('path'))
+        .attr('d',"M #{x} #{y} m #{r} 0 a #{r} #{r} 0 0 0 #{r} #{r} v #{-r} z")
+        .attr('stroke',couleur)
+        .attr('fill',couleur)
+        .attr('stroke-width',1)
+        .appendTo(dessin)
+    $(SVG('path'))
+        .attr('d',"M #{x} #{y} m #{r} #{2*r} a #{r} #{r} 0 0 0 #{-r} #{-r} v #{r} z")
+        .attr('stroke',couleur)
+        .attr('fill',couleur)
+        .attr('stroke-width',1)
+        .appendTo(dessin)
+
+L0impair = (x=0,y=0,r=20,couleur='blue') ->
+    dessin = $("#leSVG")
+    $(SVG('path'))
+        .attr('d',"M #{x} #{y} m #{r} 0 a #{r} #{r} 0 0 0 #{r} #{r} v #{r} h #{-r} a #{r} #{r} 0 0 0 #{-r} #{-r} v #{-r} z")
+        .attr('stroke',couleur)
+        .attr('fill',couleur)
+        .attr('stroke-width',1)
+        .appendTo(dessin)
+
+Lpair = (binaire, x=0,y=0,r=20,couleur='blue') ->
+	for rang in [0..binaire.length]
+	    if binaire[rang] == "1"
+	        if rang%2 == 1
+	            L1impair x+r*rang,y,r/2,couleur
+	        else
+	            L1pair x+r*rang,y,r/2,couleur
+	    else
+	        if rang%2 == 1
+	            L0pair x+r*rang,y,r/2,couleur
+	        else
+	            L0impair x+r*rang,y,r/2,couleur
+Limpair = (binaire, x=0,y=0,r=20,couleur='blue') ->
+	for rang in [0..binaire.length]
+	    if binaire[rang] == "1"
+	        if rang%2 == 0
+	            L1impair x+r*rang,y,r/2,couleur
+	        else
+	            L1pair x+r*rang,y,r/2,couleur
+	    else
+	        if rang%2 == 0
+	            L0pair x+r*rang,y,r/2,couleur
+	        else
+	            L0impair x+r*rang,y,r/2,couleur

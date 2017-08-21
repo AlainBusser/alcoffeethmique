@@ -899,7 +899,7 @@ affiche univers
 	<pre class="copier1">patates3D A, B</pre>
 	<p>qui affiche ceci :</p>
 	<div class="figure">
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs id="SVGdefs">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs >
 <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="gray"></stop>
 <stop offset="80%" stop-color="black"></stop>
@@ -1446,7 +1446,7 @@ trierDansTableau Syr
 dessineSuite Collatz, Collatz.length-1, 0, 200, 3, 'red'
 </pre>
 <div class="figure">
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs id="SVGdefs">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs >
 <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="gray"></stop>
 <stop offset="80%" stop-color="black"></stop>
@@ -1615,7 +1615,7 @@ patates diviseurs(6), diviseurs(8)</pre>
 de 8 à droite, en rouge):</p>
 <div class="figure">
 	
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs id="SVGdefs">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs >
 <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="gray"></stop>
 <stop offset="80%" stop-color="black"></stop>
@@ -1715,7 +1715,7 @@ dessineSuite u, 20, 0, 2, 5, 'red'
 </pre>
 <div class="figure">
 
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs id="SVGdefs">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs >
 <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="gray"></stop>
 <stop offset="80%" stop-color="black"></stop>
@@ -2067,7 +2067,7 @@ pour n dans [1..20]
 
 dessineSuite u, 20, 0, 1, 5, 'red'</pre>
 <div class="figure">
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs id="SVGdefs">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs >
 <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="gray"></stop>
 <stop offset="80%" stop-color="black"></stop>
@@ -5325,6 +5325,14 @@ une puissance de 2 et après conversion en binaire, on enlève le
      style="fill:none;stroke:#0000ff;stroke-width:1" />
 </svg>
 
+<p>Pour la version couleur, il faut alterner les lignes paires et impaires :</p>
+<pre class="copier2">pour n dans [0..15]
+    u = puissance 3, n
+    if n%2==0
+        Lpair ((puissance(2,24)+u).toString 2)[1..], 0, n*20
+    else
+        Limpair ((puissance(2,24)+u).toString 2)[1..], 0, n*20</pre>
+
 </div>
 <div id="loga">
 	<h2>Briggs</h2>
@@ -5397,7 +5405,7 @@ pour n dans [2..30]
 dessineSuite u, 10, 0, 100, 5, 'red'
 </pre>
 <div class="figure">
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs id="SVGdefs">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs >
 <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="gray"></stop>
 <stop offset="80%" stop-color="black"></stop>
@@ -5948,7 +5956,7 @@ dessineVoronoi nuage, 'darkGreen', 0.5
 </pre>
 <div class="figure">
 
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs id="SVGdefs">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs >
 <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="gray"></stop>
 <stop offset="80%" stop-color="black"></stop>
@@ -5984,7 +5992,7 @@ dessineVoronoi nuage, 'darkGreen', 0.5
 </pre>
 <p>L'origine des vecteurs est représentée par des billes, superflues :</p>
 <div class="figure">
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs id="SVGdefs">
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0mm" y="0mm" width="640px" height="480px"><defs >
 <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
 <stop offset="0%" stop-color="gray"></stop>
 <stop offset="80%" stop-color="black"></stop>
