@@ -277,26 +277,30 @@ deux_chiffres = function(n) {
   if (n === 0) {
     return "";
   } else {
-    if (n === 1) {
-      return "un";
+    if (n === 71) {
+      return "soixante-et-onze";
     } else {
-      if (n < 20) {
-        return nunit[n];
+      if (n === 1) {
+        return "un";
       } else {
-        if (n < 60) {
-          if (n % 10 === 0) {
-            return ndiz[quotronc(n, 10)];
-          } else {
-            return ndiz[quotronc(n, 10)] + "-" + nunit[n % 10];
-          }
+        if (n < 20) {
+          return nunit[n];
         } else {
-          if (n % 20 === 0) {
-            return ndiz[quotronc(n, 10)];
-          } else {
-            if (n % 20 === 1) {
-              return ndiz[quotronc(n, 10)] + "-" + nunit[n % 20];
+          if (n < 60) {
+            if (n % 10 === 0) {
+              return ndiz[quotronc(n, 10)];
             } else {
-              return ndiz[quotronc(n, 10)] + "-" + nunit[n % 20];
+              return ndiz[quotronc(n, 10)] + "-" + nunit[n % 10];
+            }
+          } else {
+            if (n % 20 === 0) {
+              return ndiz[quotronc(n, 10)];
+            } else {
+              if (n % 20 === 1) {
+                return ndiz[quotronc(n, 10)] + "-" + nunit[n % 20];
+              } else {
+                return ndiz[quotronc(n, 10)] + "-" + nunit[n % 20];
+              }
             }
           }
         }

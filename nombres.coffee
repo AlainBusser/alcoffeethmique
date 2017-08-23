@@ -140,6 +140,9 @@ deux_chiffres = (n) ->
     if n==0
         ""
     else
+      if n==71
+          "soixante-et-onze"
+      else
         if n==1
             "un"
         else
