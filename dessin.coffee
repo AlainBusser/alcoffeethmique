@@ -542,3 +542,72 @@ Limpair = (binaire, x=0,y=0,r=20,couleur='blue') ->
 	            L0pair x+r*rang,y,r/2,couleur
 	        else
 	            L0impair x+r*rang,y,r/2,couleur
+
+
+TricotG = (x=0,y=0,r=20, couleur="brown") ->
+    dessin = $("#leSVG")
+    $(SVG('line'))
+	    .attr('x1',x+r)
+	    .attr('y1',y)
+	    .attr('x2',x+3*r/4)
+	    .attr('y2',y+r/4)
+	    .attr('stroke',couleur)
+	    .attr('stroke-width',r/4)
+	    .attr('stroke-linecap','square')
+	    .appendTo(dessin)
+    $(SVG('line'))
+	    .attr('x1',x)
+	    .attr('y1',y+r)
+	    .attr('x2',x+r/4)
+	    .attr('y2',y+3*r/4)
+	    .attr('stroke',couleur)
+	    .attr('stroke-width',r/4)
+	    .attr('stroke-linecap','square')
+	    .appendTo(dessin)
+    $(SVG('line'))
+	    .attr('x1',x)
+	    .attr('y1',y)
+	    .attr('x2',x+r)
+	    .attr('y2',y+r)
+	    .attr('stroke',couleur)
+	    .attr('stroke-width',r/4)
+	    .attr('stroke-linecap','square')
+	    .appendTo(dessin)
+		
+TricotD = (x=0,y=0,r=20, couleur="brown") ->
+    dessin = $("#leSVG")
+    $(SVG('line'))
+	    .attr('x1',x)
+	    .attr('y1',y)
+	    .attr('x2',x+r/4)
+	    .attr('y2',y+r/4)
+	    .attr('stroke',couleur)
+	    .attr('stroke-width',r/4)
+	    .attr('stroke-linecap','square')
+	    .appendTo(dessin)
+    $(SVG('line'))
+	    .attr('x1',x+r)
+	    .attr('y1',y+r)
+	    .attr('x2',x+3*r/4)
+	    .attr('y2',y+3*r/4)
+	    .attr('stroke',couleur)
+	    .attr('stroke-width',r/4)
+	    .attr('stroke-linecap','square')
+	    .appendTo(dessin)
+    $(SVG('line'))
+	    .attr('x1',x+r)
+	    .attr('y1',y)
+	    .attr('x2',x)
+	    .attr('y2',y+r)
+	    .attr('stroke',couleur)
+	    .attr('stroke-width',r/4)
+	    .attr('stroke-linecap','square')
+	    .appendTo(dessin)
+		
+ligneTricot = (binaire, x=0,y=0,r=20,couleur='brown') ->
+	for rang in [0..binaire.length]
+	    if binaire[rang] == "1"
+	        TricotG x+r*rang,y,r,couleur
+	    else
+	        TricotD x+r*rang,y,r,couleur
+
