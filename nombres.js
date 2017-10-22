@@ -410,6 +410,7 @@ toMath = function(cs) {
     re = new RegExp(key, 'g');
     return cs = cs.replace(re, value);
   });
+  cs = cs.replace(/\[(\d+)\.\.(\d+)\]/g, "〚$1,$2〛");
   return cs;
 };
 

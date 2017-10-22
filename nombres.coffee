@@ -253,6 +253,7 @@ toMath = (cs) ->
     _.each Znot, (value,key)->
         re = new RegExp key, 'g'
         cs = cs.replace re, value
+    cs = cs.replace /\[(\d+)\.\.(\d+)\]/g, "〚$1,$2〛"
     cs
 
 truchetrond = (binaire) ->
