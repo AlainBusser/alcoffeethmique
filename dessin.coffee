@@ -2,26 +2,26 @@ SVG = (tag) ->
     document.createElementNS('http://www.w3.org/2000/svg', tag)
 
 reflets = """
-	<defs>
-	<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
-	<stop offset="0%" stop-color="gray" />
-	<stop offset="80%" stop-color="black" />
-	</linearGradient>
-	<marker id="pointe" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
-	<path d="M 0 0 L 10 5 L 0 10 z" fill="url(#metal)" />
-	</marker>
-	<radialGradient id="coque"  cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
-	<stop offset="0%" stop-color="white" />
-	<stop offset="80%" stop-color="brown" />
-	<stop offset="100%" stop-color="black" />
-	</radialGradient>
-	<radialGradient id="bille" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
-	<stop offset="0%" stop-color="white" />
-	<stop offset="75%" stop-color="blue" />
-	<stop offset="100%" stop-color="black" />
-	</radialGradient>
-	</defs>
-	"""
+    <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="gray" />
+    <stop offset="80%" stop-color="black" />
+    </linearGradient>
+    <marker id="pointe" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="url(#metal)" />
+    </marker>
+    <radialGradient id="coque"  cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
+    <stop offset="0%" stop-color="white" />
+    <stop offset="80%" stop-color="brown" />
+    <stop offset="100%" stop-color="black" />
+    </radialGradient>
+    <radialGradient id="bille" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
+    <stop offset="0%" stop-color="white" />
+    <stop offset="75%" stop-color="blue" />
+    <stop offset="100%" stop-color="black" />
+    </radialGradient>
+    </defs>
+    """
     
 effaceDessin = () ->
     dessin = $("#leSVG")
@@ -64,26 +64,26 @@ dessineCercle = (cx=0,cy=0,r=5,couleur='red') ->
         .appendTo(dessin)
 
 dessinePoint = (cx=0, cy=0, r=4) ->
-	dessin = $("#leSVG")
-	$(SVG('circle'))
-		.attr('cx',cx)
-		.attr('cy',cy)
-		.attr('r',r)
-		.attr('fill','url(#bille)')
-		.appendTo dessin
+    dessin = $("#leSVG")
+    $(SVG('circle'))
+        .attr('cx',cx)
+        .attr('cy',cy)
+        .attr('r',r)
+        .attr('fill','url(#bille)')
+        .appendTo dessin
 
 dessineEllipse = (cx=100, cy=200, rx=100, ry=200, couleur="brown") ->
-	dessin = $("#leSVG")
-	$(SVG('ellipse'))
-		.attr('cx',cx)
-		.attr('cy',cy)
-		.attr('rx',rx)
-		.attr('ry',ry)
-		.attr('stroke',couleur)
-		.attr('fill',couleur)
-		.attr('fill-opacity',0.4)
-		.attr('stroke-width',1)
-		.appendTo dessin
+    dessin = $("#leSVG")
+    $(SVG('ellipse'))
+        .attr('cx',cx)
+        .attr('cy',cy)
+        .attr('rx',rx)
+        .attr('ry',ry)
+        .attr('stroke',couleur)
+        .attr('fill',couleur)
+        .attr('fill-opacity',0.4)
+        .attr('stroke-width',1)
+        .appendTo dessin
 
 dessinePolygone = (liste=[[0,0], [300,100],[100,300]], couleur='green', rempli=none) ->
     dessin = $("#leSVG")
@@ -327,17 +327,17 @@ patates = (S1,S2,Cx=320,c1='blue',c2='red') ->
     dessineEllipse Cx+1.5*Rx, 240, 2.5*Rx, 200, c2
 
 ellipse = (cx=100, cy=200, rx=100, ry=200, couleur="brown", alpha=0.3) ->
-	dessin = $("#leSVG")
-	$(SVG('ellipse'))
-		.attr('cx',cx)
-		.attr('cy',cy)
-		.attr('rx',rx)
-		.attr('ry',ry)
-		.attr('stroke',couleur)
-		.attr('fill','url(#coque)')
-		.attr('fill-opacity',alpha)
-		.attr('stroke-width',1)
-		.appendTo dessin
+    dessin = $("#leSVG")
+    $(SVG('ellipse'))
+        .attr('cx',cx)
+        .attr('cy',cy)
+        .attr('rx',rx)
+        .attr('ry',ry)
+        .attr('stroke',couleur)
+        .attr('fill','url(#coque)')
+        .attr('fill-opacity',alpha)
+        .attr('stroke-width',1)
+        .appendTo dessin
 
 
 
@@ -446,11 +446,11 @@ Tdroite = (x=0,y=0,r=20,couleur='blue') ->
         .appendTo(dessin)
 
 ligneTruchet = (binaire, x=0,y=0,r=20,couleur='blue') ->
-	for rang in [0..binaire.length]
-	    if binaire[rang] == "1"
-	        Tgauche x+r*rang,y,r/2,couleur
-	    else
-	        Tdroite x+r*rang,y,r/2,couleur
+    for rang in [0..binaire.length]
+        if binaire[rang] == "1"
+            Tgauche x+r*rang,y,r/2,couleur
+        else
+            Tdroite x+r*rang,y,r/2,couleur
 
 
 Tgc = (x=0,y=0,r=20,cH='red',cV='red') ->
@@ -464,11 +464,11 @@ Tdc = (x=0,y=0,r=20,cH='red',cV='red') ->
     dessineSegment x, y+r/2, x+r, y+r/2, cH
 
 croixTruchet = (binaire, x=0,y=0,r=20,cH='red',cV='red') ->
-	for rang in [0..binaire.length]
-	    if binaire[rang] == "1"
-	        Tgc x+r*rang,y,r,cH,cV
-	    else
-	        Tdc x+r*rang,y,r,cH,cV
+    for rang in [0..binaire.length]
+        if binaire[rang] == "1"
+            Tgc x+r*rang,y,r,cH,cV
+        else
+            Tdc x+r*rang,y,r,cH,cV
 
 L1pair = (x=0,y=0,r=20,couleur='blue') ->
     dessin = $("#leSVG")
@@ -519,95 +519,95 @@ L0impair = (x=0,y=0,r=20,couleur='blue') ->
         .appendTo(dessin)
 
 Lpair = (binaire, x=0,y=0,r=20,couleur='blue') ->
-	for rang in [0..binaire.length]
-	    if binaire[rang] == "1"
-	        if rang%2 == 1
-	            L1impair x+r*rang,y,r/2,couleur
-	        else
-	            L1pair x+r*rang,y,r/2,couleur
-	    else
-	        if rang%2 == 1
-	            L0pair x+r*rang,y,r/2,couleur
-	        else
-	            L0impair x+r*rang,y,r/2,couleur
+    for rang in [0..binaire.length]
+        if binaire[rang] == "1"
+            if rang%2 == 1
+                L1impair x+r*rang,y,r/2,couleur
+            else
+                L1pair x+r*rang,y,r/2,couleur
+        else
+            if rang%2 == 1
+                L0pair x+r*rang,y,r/2,couleur
+            else
+                L0impair x+r*rang,y,r/2,couleur
 Limpair = (binaire, x=0,y=0,r=20,couleur='blue') ->
-	for rang in [0..binaire.length]
-	    if binaire[rang] == "1"
-	        if rang%2 == 0
-	            L1impair x+r*rang,y,r/2,couleur
-	        else
-	            L1pair x+r*rang,y,r/2,couleur
-	    else
-	        if rang%2 == 0
-	            L0pair x+r*rang,y,r/2,couleur
-	        else
-	            L0impair x+r*rang,y,r/2,couleur
+    for rang in [0..binaire.length]
+        if binaire[rang] == "1"
+            if rang%2 == 0
+                L1impair x+r*rang,y,r/2,couleur
+            else
+                L1pair x+r*rang,y,r/2,couleur
+        else
+            if rang%2 == 0
+                L0pair x+r*rang,y,r/2,couleur
+            else
+                L0impair x+r*rang,y,r/2,couleur
 
 
 TricotG = (x=0,y=0,r=20, couleur="brown") ->
     dessin = $("#leSVG")
     $(SVG('line'))
-	    .attr('x1',x+r)
-	    .attr('y1',y)
-	    .attr('x2',x+3*r/4)
-	    .attr('y2',y+r/4)
-	    .attr('stroke',couleur)
-	    .attr('stroke-width',r/4)
-	    .attr('stroke-linecap','square')
-	    .appendTo(dessin)
+        .attr('x1',x+r)
+        .attr('y1',y)
+        .attr('x2',x+3*r/4)
+        .attr('y2',y+r/4)
+        .attr('stroke',couleur)
+        .attr('stroke-width',r/4)
+        .attr('stroke-linecap','square')
+        .appendTo(dessin)
     $(SVG('line'))
-	    .attr('x1',x)
-	    .attr('y1',y+r)
-	    .attr('x2',x+r/4)
-	    .attr('y2',y+3*r/4)
-	    .attr('stroke',couleur)
-	    .attr('stroke-width',r/4)
-	    .attr('stroke-linecap','square')
-	    .appendTo(dessin)
+        .attr('x1',x)
+        .attr('y1',y+r)
+        .attr('x2',x+r/4)
+        .attr('y2',y+3*r/4)
+        .attr('stroke',couleur)
+        .attr('stroke-width',r/4)
+        .attr('stroke-linecap','square')
+        .appendTo(dessin)
     $(SVG('line'))
-	    .attr('x1',x)
-	    .attr('y1',y)
-	    .attr('x2',x+r)
-	    .attr('y2',y+r)
-	    .attr('stroke',couleur)
-	    .attr('stroke-width',r/4)
-	    .attr('stroke-linecap','square')
-	    .appendTo(dessin)
-		
+        .attr('x1',x)
+        .attr('y1',y)
+        .attr('x2',x+r)
+        .attr('y2',y+r)
+        .attr('stroke',couleur)
+        .attr('stroke-width',r/4)
+        .attr('stroke-linecap','square')
+        .appendTo(dessin)
+
 TricotD = (x=0,y=0,r=20, couleur="brown") ->
     dessin = $("#leSVG")
     $(SVG('line'))
-	    .attr('x1',x)
-	    .attr('y1',y)
-	    .attr('x2',x+r/4)
-	    .attr('y2',y+r/4)
-	    .attr('stroke',couleur)
-	    .attr('stroke-width',r/4)
-	    .attr('stroke-linecap','square')
-	    .appendTo(dessin)
+        .attr('x1',x)
+        .attr('y1',y)
+        .attr('x2',x+r/4)
+        .attr('y2',y+r/4)
+        .attr('stroke',couleur)
+        .attr('stroke-width',r/4)
+        .attr('stroke-linecap','square')
+        .appendTo(dessin)
     $(SVG('line'))
-	    .attr('x1',x+r)
-	    .attr('y1',y+r)
-	    .attr('x2',x+3*r/4)
-	    .attr('y2',y+3*r/4)
-	    .attr('stroke',couleur)
-	    .attr('stroke-width',r/4)
-	    .attr('stroke-linecap','square')
-	    .appendTo(dessin)
+        .attr('x1',x+r)
+        .attr('y1',y+r)
+        .attr('x2',x+3*r/4)
+        .attr('y2',y+3*r/4)
+        .attr('stroke',couleur)
+        .attr('stroke-width',r/4)
+        .attr('stroke-linecap','square')
+        .appendTo(dessin)
     $(SVG('line'))
-	    .attr('x1',x+r)
-	    .attr('y1',y)
-	    .attr('x2',x)
-	    .attr('y2',y+r)
-	    .attr('stroke',couleur)
-	    .attr('stroke-width',r/4)
-	    .attr('stroke-linecap','square')
-	    .appendTo(dessin)
-		
+        .attr('x1',x+r)
+        .attr('y1',y)
+        .attr('x2',x)
+        .attr('y2',y+r)
+        .attr('stroke',couleur)
+        .attr('stroke-width',r/4)
+        .attr('stroke-linecap','square')
+        .appendTo(dessin)
+        
 ligneTricot = (binaire, x=0,y=0,r=20,couleur='brown') ->
-	for rang in [0..binaire.length]
-	    if binaire[rang] == "1"
-	        TricotG x+r*rang,y,r,couleur
-	    else
-	        TricotD x+r*rang,y,r,couleur
+    for rang in [0..binaire.length]
+        if binaire[rang] == "1"
+            TricotG x+r*rang,y,r,couleur
+        else
+            TricotD x+r*rang,y,r,couleur
 

@@ -301,3 +301,24 @@ binpixels = (binaire) ->
     t = t.replace /1/g, "⬛"
     t
 
+est_minuscule = (lettre) ->
+    n = lettre.codePointAt(0)
+    97<=n<=122
+
+est_majuscule = (lettre) ->
+    n = lettre.codePointAt(0)
+    65<=n<=90
+
+
+
+calligraphique = (texte) ->
+    s = ''
+    for k in [0..texte.length]
+        if est_minuscule texte.charAt k
+            s += String.fromCodePoint (texte.charAt k).codePointAt(0)+119945
+        else
+            if est_majuscule texte.charAt k
+                s += String.fromCodePoint (texte.charAt k).codePointAt(0)+119951
+            else
+                s += texte.charAt k
+    s
