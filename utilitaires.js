@@ -6,7 +6,8 @@
 // Florian Tobé
 //
 var affiche=function(x){
-   	$('#cadrout').append('\n'+calligraphique(x.toString()));
+//   	$('#cadrout').append('\n'+calligraphique(x.toString()));
+   	$('#cadrout').append('\n'+x.toLocaleString());
 }
 var entre=function(c){
 	var essai=prompt(c,dé(10));
